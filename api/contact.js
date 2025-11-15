@@ -45,26 +45,40 @@ ${message}
       })
     });
 
-    if (!resp.ok) {
-      let details = "";
-      try {
-        const data = await resp.json();
-        details = data?.message || JSON.stringify(data);
-      } catch {
-        // ignore parse error
+    // Try to read the response body (success or error)
+    let details = "";
+    let data = null;
+    try {
+      data = await resp.json();
+      if (data) {
+        details = data.message || data.error || JSON.stringify(data);
       }
+    } catch (e) {
+      // Not JSON; try text
+      try {
+        details = await resp.text();
+      } catch {
+        // ignore
+      }
+    }
+
+    if (!resp.ok) {
       console.error("Resend error:", resp.status, details);
-      return res
-        .status(500)
-        .json({ error: "Error sending email. Please try again later." });
+      return res.status(500).json({
+        error:
+          details ||
+          `Resend returned status ${resp.status} while sending the email.`
+      });
     }
 
     // Success
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error sending lead email:", error);
-    return res
-      .status(500)
-      .json({ error: "Error sending email. Please try again later." });
+    return res.status(500).json({
+      error:
+        "Error sending email: " + (error?.message || "Unknown server error.")
+    });
   }
 }
+
