@@ -213,11 +213,26 @@
           </a>
         </div>
 
-        <div class="reviews-aggregate">
-          <span class="badge">★★★★★ 5.0 Google Rating</span>
-          <span><strong>32+ verified reviews</strong> from Houston-area outdoor living projects.</span>
-          <span>Ratings reflect public sources and may change; see <a href="/reviews.html">our reviews page</a> for current details.</span>
-        </div>
+        <div
+  class="reviews-aggregate"
+  itemscope
+  itemtype="https://schema.org/AggregateRating"
+>
+  <span class="badge">
+    ★★★★★ <span itemprop="ratingValue">5.0</span> Google Rating
+  </span>
+
+  <span>
+    <strong><span itemprop="reviewCount">32</span> verified reviews</strong>
+    from Houston-area outdoor living projects.
+  </span>
+
+  <span>
+    Ratings reflect public sources and may change; see
+    <a href="/reviews" itemprop="url">our reviews page</a> for current details.
+  </span>
+</div>
+
 
         <div class="reviews-cta">
           <a href="/reviews.html" class="btn-outline">See All Reviews</a>
@@ -269,6 +284,94 @@
           </a>
         </div>
       </section>
+<!-- RECENT PROJECTS / GALLERY PREVIEW -->
+<section id="gallery" class="section gallery-preview">
+  <div class="section-inner">
+    <header class="section-header">
+      <h2>Recent Outdoor Kitchen &amp; Patio Projects</h2>
+      <p>See real outdoor kitchens, pergolas, and patio covers we’ve completed around Katy, Richmond, Cinco Ranch, and Sealy.</p>
+    </header>
+
+    <div class="gallery-grid">
+      <!-- Richmond -->
+      <article class="gallery-card">
+        <a href="richmond-outdoor-kitchen-job.html" class="gallery-card-link">
+          <div class="gallery-card-image">
+            <img
+              src="images/outdoor-kitchen-richmond-3.jpg"
+              alt="Outdoor kitchen project in Richmond, TX"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-card-body">
+            <h3>Outdoor Kitchen – Richmond, TX</h3>
+            <p>Stone outdoor kitchen with built-in grill and prep area for a Richmond backyard.</p>
+            <span class="gallery-card-meta">View project photos &amp; details</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Katy -->
+      <article class="gallery-card">
+        <a href="katy-outdoor-kitchen-job.html" class="gallery-card-link">
+          <div class="gallery-card-image">
+            <img
+              src="images/outdoor-kitchen-katy-2.jpg"
+              alt="Outdoor kitchen island project in Katy, TX"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-card-body">
+            <h3>Outdoor Kitchen Island – Katy, TX</h3>
+            <p>Custom outdoor kitchen island for a Katy backyard, perfect for weekend cookouts.</p>
+            <span class="gallery-card-meta">View project photos &amp; details</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Cinco Ranch / Tamarron -->
+      <article class="gallery-card">
+        <a href="cinco-ranch-outdoor-bbq-island-job.html" class="gallery-card-link">
+          <div class="gallery-card-image">
+            <img
+              src="images/outdoor-bbq-island-cinco-ranch-northwest-tamarron.jpg"
+              alt="Outdoor BBQ island in Cinco Ranch / Tamarron, TX"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-card-body">
+            <h3>Outdoor BBQ Island – Cinco Ranch / Tamarron</h3>
+            <p>BBQ island and seating area for a Northwest Cinco Ranch / Tamarron backyard.</p>
+            <span class="gallery-card-meta">View project photos &amp; details</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Sealy -->
+      <article class="gallery-card">
+        <a href="sealy-outdoor-kitchen-bbq-job.html" class="gallery-card-link">
+          <div class="gallery-card-image">
+            <img
+              src="images/outdoor-kitchen-bbq-island-sealy2.jpg"
+              alt="Outdoor kitchen and BBQ island in Sealy, TX"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-card-body">
+            <h3>Outdoor Kitchen &amp; BBQ – Sealy, TX</h3>
+            <p>Outdoor kitchen and BBQ island installed for a Sealy homeowner.</p>
+            <span class="gallery-card-meta">View project photos &amp; details</span>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="gallery-preview-footer">
+      <a class="btn-primary" href="gallery.html">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
 
       <!-- WHY CHOOSE -->
       <section class="why-choose" id="why">
