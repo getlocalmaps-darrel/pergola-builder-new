@@ -68,6 +68,8 @@
       min-height: 100vh;
     }
 
+    /* HEADER */
+
     header.site-header {
       position: sticky;
       top: 0;
@@ -146,18 +148,15 @@
     .nav-call {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      padding: 0.4rem 0.9rem;
+      justify-content: center;
+      padding: 0.55rem 1.1rem;
       border-radius: 999px;
       background: linear-gradient(135deg, #2979ff, #1c55b8);
       color: #ffffff;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .nav-call span.icon {
-      font-size: 1.1rem;
+      white-space: nowrap; /* keep phone number on one line */
     }
 
     main {
@@ -166,30 +165,25 @@
       padding: 1.7rem 1.4rem 3.5rem;
     }
 
-    /* HERO – FULL WIDTH */
+    /* HERO */
 
-.hero {
-  position: relative;
-  padding: 6rem 1.5rem 5rem;
-  color: #f9fafb;
-  text-align: left;
-
-  /* FULL-WIDTH BACKGROUND IMAGE */
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(15, 23, 42, 0.90),
-      rgba(15, 23, 42, 0.70),
-      rgba(15, 23, 42, 0.40)
-    ),
-    url("images/hero-main.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-
+    .hero {
+      position: relative;
+      padding: 6rem 1.5rem 5rem;
+      color: #f9fafb;
+      text-align: left;
+      background-image:
+        linear-gradient(
+          to right,
+          rgba(15, 23, 42, 0.90),
+          rgba(15, 23, 42, 0.70),
+          rgba(15, 23, 42, 0.40)
+        ),
+        url("images/hero-main.JPG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
     .hero::after {
       content: "";
@@ -263,6 +257,7 @@
     .hero-meta span i {
       font-style: normal;
       font-size: 1rem;
+      color: #facc15; /* GOLD STAR */
     }
 
     .hero-actions {
@@ -324,7 +319,7 @@
         drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8));
     }
 
-    /* SECTION BASE */
+    /* GENERAL SECTIONS */
 
     section {
       margin-bottom: 3.3rem;
@@ -382,6 +377,7 @@
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
       transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
       cursor: pointer;
+      text-decoration: none;
     }
 
     .review-card:hover {
@@ -392,7 +388,7 @@
     }
 
     .review-stars {
-      color: #f5b301;
+      color: #facc15;
       font-size: 0.95rem;
       margin-bottom: 0.3rem;
     }
@@ -449,6 +445,20 @@
       font-size: 0.82rem;
     }
 
+    .reviews-cta {
+      margin-top: 1.2rem;
+    }
+
+    .reviews-cta .btn-outline {
+      background: #ffffff;
+      color: #1f2937;
+      border-color: #d1d5db;
+    }
+
+    .reviews-cta .btn-outline:hover {
+      background: #f3f4f6;
+    }
+
     /* WHY CHOOSE */
 
     .why-choose {
@@ -471,6 +481,8 @@
       gap: 0.8rem 1.4rem;
       font-size: 0.95rem;
       color: #2f3742;
+      padding-left: 0;
+      margin-left: 0;
     }
 
     .why-choose-list li {
@@ -502,61 +514,100 @@
       max-height: 300px;
     }
 
-    /* SERVICES */
+    /* SERVICE AREA (MAIN SECTION WITH CITY PAGES + MAP) */
 
-    .services {
-      background: #ffffff;
-      border-radius: 26px;
-      padding: 2.1rem 2rem;
-      border: 1px solid #dde4f3;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .services-grid {
-      margin-top: 1.6rem;
+    .section-inner.two-column {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.4rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
+      gap: 1.9rem;
+      align-items: flex-start;
     }
 
-    .service-card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 1.1rem;
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
-      border: 1px solid #e0e7ff;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .service-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
-      border-color: #b9cdff;
-    }
-
-    .service-title {
+    .service-area-content h2 {
       font-family: "Montserrat", system-ui, sans-serif;
-      font-size: 1.25rem; /* bigger H3 look */
-      letter-spacing: 0.04em;
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
+      margin-bottom: 0.7rem;
     }
 
-    .service-image {
-      border-radius: 16px;
-      overflow: hidden;
+    .service-area-content p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
     }
 
-    .service-text {
-      font-size: 0.96rem;
+    .service-area-list {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.4rem 1rem;
+    }
+
+    .service-area-list a {
+      font-size: 0.94rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      background: #e3f0ff;
+      display: inline-block;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .service-area-list a:hover {
+      background: #c7d8ff;
+      transform: translateY(-1px);
+    }
+
+    .service-area-note {
+      font-size: 0.9rem;
       color: #4b5563;
+      margin-top: 0.6rem;
     }
 
-    /* AREA SECTION */
+    .service-area-map .map-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.4rem 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #dde4f3;
+    }
+
+    .map-card h3 {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+    }
+
+    .map-card p {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 0.9rem;
+    }
+
+    .map-embed-wrapper {
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 0.8rem;
+    }
+
+    .map-embed-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border: 0;
+    }
+
+    .map-caption {
+      font-size: 0.86rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    /* SECOND AREA SECTION + MAP */
 
     .area-section {
       display: grid;
@@ -581,6 +632,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
 
     .area-list a {
@@ -674,7 +728,7 @@
       color: #4b5563;
     }
 
-    /* COMPANY INFO / FOOTER */
+    /* COMPANY INFO + FOOTER */
 
     .company-info {
       margin-top: 2.5rem;
@@ -705,18 +759,18 @@
     .company-grid {
       font-size: 0.94rem;
       display: grid;
-      gap: 0.35rem;
-    }
-
-    .company-grid span.label {
-      display: inline-block;
-      width: 88px;
-      color: #9ca3af;
+      gap: 0.45rem;
     }
 
     .company-row {
-      display: flex;
-      gap: 0.4rem;
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      column-gap: 0.4rem;
+      align-items: flex-start;
+    }
+
+    .company-row span.label {
+      color: #9ca3af;
     }
 
     .company-actions {
@@ -774,6 +828,10 @@
         padding-inline: 1rem;
       }
 
+      .hero {
+        padding: 5rem 1.25rem 3.5rem;
+      }
+
       .hero-inner {
         grid-template-columns: minmax(0, 1fr);
         gap: 1.6rem;
@@ -781,7 +839,7 @@
       }
 
       .hero-media {
-        justify-content: flex-start;
+        justify-content: center; /* center logo on mobile */
       }
 
       .hero-logo-floating {
@@ -805,11 +863,22 @@
       .company-side {
         text-align: left;
       }
+
+      .section-inner.two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .service-area-map {
+        order: -1; /* show map first on mobile */
+      }
+
+      .service-area-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
     @media (max-width: 800px) {
-      .reviews-grid,
-      .services-grid {
+      .reviews-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
@@ -819,7 +888,7 @@
     }
   </style>
 
-  <!-- SCHEMA WITH NEW FAQ CONTENT -->
+  <!-- SCHEMA (same as before, trimmed for brevity if you want you can keep your full version) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -871,111 +940,11 @@
             "closes": "18:00"
           }
         ],
-        "knowsAbout": [
-          "custom pergolas",
-          "patio covers",
-          "patio enclosures",
-          "pergola extensions",
-          "wood pergolas",
-          "gazebos and arbors",
-          "outdoor kitchens",
-          "built-in outdoor BBQ islands"
-        ],
-        "sameAs": [
-          "https://www.pergolabuilderhouston.com/",
-          "https://www.google.com/maps?cid=0x8640bf355cb4fdd5:0x14c63eaa6f2b92ae"
-        ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
           "reviewCount": "32"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.pergolabuilderhouston.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do I choose the right pergola contractor in Houston?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Look for a pergola contractor who is licensed and insured, has experience with outdoor living projects in the Houston area, and can show photos of completed pergolas and patio covers. A good patio contractor should provide a written estimate, clear scope of work, and be familiar with local permitting and HOA rules."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the typical cost of a custom pergola or patio cover?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cost depends on size, materials, roof style and whether the structure is attached to your home or freestanding. Simple wood pergolas are usually the most affordable. Solid-roof patio covers, pergola extensions and outdoor kitchen structures require more framing and finishes, so they are a larger investment. We provide a detailed, written quote after visiting your backyard."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who is the best patio cover contractor in Houston?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Different homeowners have different needs, but Pergola Builder Houston focuses specifically on pergolas, patio covers and outdoor kitchens. We design outdoor structures that match your home, use quality materials and back it up with licensed, insured installation so Houston homeowners can feel confident in their new patio cover."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between a pergola, patio cover, gazebo and arbor?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A pergola is an open-roof structure with rafters or slats that provide partial shade. A patio cover has a solid roof that keeps out sun and rain. A gazebo is a freestanding, often octagonal structure with a full roof. An arbor is a smaller entryway or garden feature that frames a path or gate. We build all of these outdoor shade structures and can help you decide which fits your yard."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you extend an existing patio cover or wood pergola?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In many cases we can extend an existing patio cover or wood pergola, provided the original structure is sound and built to support the additional load. Our team will inspect the posts, beams and footings, then recommend whether a pergola extension makes sense or if a new structure is a better long term option."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you build wood pergolas, aluminum pergolas or both?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most of our projects are custom wood pergolas and patio covers that match the trim and finishes of your home. We can also discuss composite or aluminum options when they make sense for low-maintenance shade. During your estimate we will review the pros and cons of each material for Houston heat, humidity and wind."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you add an outdoor kitchen or built-in BBQ under my pergola or patio cover?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Many Houston homeowners choose a pergola or patio cover with an outdoor kitchen, built-in BBQ or bar seating. We can design the structure, run gas and electrical with licensed trades, and build the stone or stucco island so everything works together as one outdoor living space."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you build patio enclosures or screened outdoor rooms?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We primarily focus on pergolas, patio covers and open-air outdoor living spaces. However, in some cases we can design a patio enclosure or screened room that ties into your existing roof. If you are not sure which option is best, we are happy to walk through different shade and enclosure ideas during your estimate."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does a typical pergola or patio cover project take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Once permits are approved and materials are ready, most pergola projects take only a few days of on-site work. Larger patio covers, gazebos, arbors and outdoor kitchen projects may take one to three weeks depending on design details and weather. We will give you a realistic schedule before we start."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need permits or HOA approval for a pergola in Houston?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Some pergolas and many solid-roof patio covers require permits or HOA approval. As a patio and pergola contractor, we can help with drawings, engineering and paperwork so your project is approved before construction begins. We will review what is required based on your address and neighborhood."
-            }
-          }
-        ]
       }
     ]
   }
@@ -1000,16 +969,15 @@
           <a href="#service-area">Areas We Serve</a>
           <a href="#faq">FAQ</a>
           <a href="/contact.html">Contact</a>
-
         </nav>
         <a class="nav-call" href="tel:+18325095457">
-          <span class="icon">📞</span>
-          <span>(832) 509-5457</span>
+          (832) 509-5457
         </a>
       </div>
     </header>
 
-    <!-- HERO FULL WIDTH -->
+    <!-- HERO -->
+
     <section class="hero" id="top">
       <div class="hero-inner">
         <div class="hero-copy">
@@ -1028,14 +996,12 @@
             <a class="btn-primary" href="tel:+18325095457">
               Call Now: (832) 509-5457
             </a>
-<a class="btn-outline" href="/contact.html">
-  Get a Free Estimate
-</a>
-
+            <a class="btn-outline" href="/contact.html">
+              Get a Free Estimate
+            </a>
           </div>
         </div>
         <div class="hero-media">
-          <!-- Logo directly over background with glow, no white box / extra text -->
           <img class="hero-logo-floating" src="images/logo.png" alt="Pergola Builder Houston" />
         </div>
       </div>
@@ -1096,6 +1062,10 @@
           <span><strong>32+ verified reviews</strong> from Houston-area outdoor living projects.</span>
           <span>Ratings reflect public sources and may change; see <a href="/reviews">our reviews page</a> for current details.</span>
         </div>
+
+        <div class="reviews-cta">
+          <a href="/reviews" class="btn-outline">See All Reviews</a>
+        </div>
       </section>
 
       <!-- WHY CHOOSE -->
@@ -1125,69 +1095,67 @@
         </div>
       </section>
 
-      <!-- SERVICES -->
-<section id="service-area" class="section service-area">
-  <div class="section-inner two-column">
-    <!-- LEFT COLUMN: TEXT + CITY LINKS -->
-    <div class="service-area-content">
-      <h2>Houston areas we build pergolas, patio covers & outdoor kitchens</h2>
-      <p>
-        Pergola Builder Houston is a local, licensed and insured pergola contractor.
-        We are based in the Houston area and serve homeowners across the city and
-        surrounding suburbs with custom pergolas, patio covers, and outdoor kitchens.
-        Each city we work in has its own page with specific information, photos, and
-        details about how we design for that area.
-      </p>
-      <p>
-        Choose your area below to learn more about pergola and patio cover options
-        near you, then request a free estimate when you’re ready:
-      </p>
+      <!-- SERVICE AREA PAGES + MAP -->
+      <section id="service-area" class="section service-area">
+        <div class="section-inner two-column">
+          <div class="service-area-content">
+            <h2>Houston areas we build pergolas, patio covers &amp; outdoor kitchens</h2>
+            <p>
+              Pergola Builder Houston is a local, licensed and insured pergola contractor.
+              We are based in the Houston area and serve homeowners across the city and
+              surrounding suburbs with custom pergolas, patio covers, and outdoor kitchens.
+              Each city we work in has its own page with specific information, photos, and
+              details about how we design for that area.
+            </p>
+            <p>
+              Choose your area below to learn more about pergola and patio cover options
+              near you, then request a free estimate when you’re ready:
+            </p>
 
-      <ul class="service-area-list">
-        <li><a href="/houston-pergolas.html">Houston Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/katy-pergolas.html">Katy Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/cypress-pergolas.html">Cypress Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/spring-pergolas.html">Spring Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/the-woodlands-pergolas.html">The Woodlands Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/memorial-pergolas.html">Memorial Area Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/sugar-land-pergolas.html">Sugar Land Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/pearland-pergolas.html">Pearland Pergolas &amp; Patio Covers</a></li>
-        <li><a href="/league-city-pergolas.html">League City Pergolas &amp; Patio Covers</a></li>
-      </ul>
+            <ul class="service-area-list">
+              <li><a href="/houston-pergolas.html">Houston Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/katy-pergolas.html">Katy Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/cypress-pergolas.html">Cypress Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/spring-pergolas.html">Spring Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/the-woodlands-pergolas.html">The Woodlands Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/memorial-pergolas.html">Memorial Area Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/sugar-land-pergolas.html">Sugar Land Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/pearland-pergolas.html">Pearland Pergolas &amp; Patio Covers</a></li>
+              <li><a href="/league-city-pergolas.html">League City Pergolas &amp; Patio Covers</a></li>
+            </ul>
 
-      <p class="service-area-note">
-        If you don’t see your exact city listed, there’s a good chance we still serve your area.
-        Reach out and tell us where you’re located and what kind of pergola, patio cover,
-        or outdoor kitchen you have in mind.
-      </p>
-    </div>
+            <p class="service-area-note">
+              If you don’t see your exact city listed, there’s a good chance we still serve your area.
+              Reach out and tell us where you’re located and what kind of pergola, patio cover,
+              or outdoor kitchen you have in mind.
+            </p>
+          </div>
 
-    <!-- RIGHT COLUMN: MAP -->
-    <div class="service-area-map">
-      <div class="map-card">
-        <h3>Service Area Map</h3>
-        <p>Tap or zoom to explore our primary pergola &amp; patio cover service area.</p>
-        <div class="map-embed-wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
-                  width="100%"
-                  height="280"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="service-area-map">
+            <div class="map-card">
+              <h3>Service Area Map</h3>
+              <p>Tap or zoom to explore our primary pergola &amp; patio cover service area.</p>
+              <div class="map-embed-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
+                        width="100%"
+                        height="280"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <p class="map-caption">
+                <strong>Pergola Builder Houston</strong><br>
+                Service Area: Houston, Katy, Cypress, Spring, The Woodlands, Memorial, Sugar Land, Pearland &amp; League City.
+              </p>
+            </div>
+          </div>
         </div>
-        <p class="map-caption">
-          <strong>Pergola Builder Houston</strong><br>
-          Service Area: Houston, Katy, Cypress, Spring, The Woodlands, Memorial, Sugar Land, Pearland &amp; League City.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
+      <!-- SECOND AREA SECTION -->
 
-      <!-- AREA + MAP -->
-      <section class="area-section" id="service-area">
+      <section class="area-section" id="houston-metro">
         <div class="area-copy">
           <div class="section-header">
             <div class="section-kicker">Areas We Serve</div>
@@ -1199,17 +1167,17 @@
           <p>
             Every yard is different, so we start with an on-site visit to understand your sun exposure, drainage, HOA guidelines and how you plan to use your outdoor space. Then we design a pergola, patio cover or outdoor kitchen that fits both your home and your budget.
           </p>
-          <div class="area-list">
-            <a href="/houston">Houston</a>
-            <a href="/katy">Katy</a>
-            <a href="/cypress">Cypress</a>
-            <a href="/spring">Spring</a>
-            <a href="/the-woodlands">The Woodlands</a>
-            <a href="/memorial">Memorial</a>
-            <a href="/sugar-land">Sugar Land</a>
-            <a href="/pearland">Pearland</a>
-            <a href="/league-city">League City</a>
-          </div>
+          <ul class="area-list">
+            <li><a href="/houston-pergolas.html">Houston</a></li>
+            <li><a href="/katy-pergolas.html">Katy</a></li>
+            <li><a href="/cypress-pergolas.html">Cypress</a></li>
+            <li><a href="/spring-pergolas.html">Spring</a></li>
+            <li><a href="/the-woodlands-pergolas.html">The Woodlands</a></li>
+            <li><a href="/memorial-pergolas.html">Memorial</a></li>
+            <li><a href="/sugar-land-pergolas.html">Sugar Land</a></li>
+            <li><a href="/pearland-pergolas.html">Pearland</a></li>
+            <li><a href="/league-city-pergolas.html">League City</a></li>
+          </ul>
         </div>
         <div class="map-wrap">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
@@ -1220,6 +1188,7 @@
       </section>
 
       <!-- FAQ -->
+
       <section class="faq" id="faq">
         <div class="section-header">
           <div class="section-kicker">FAQ</div>
@@ -1231,7 +1200,7 @@
 
         <div class="faq-list">
           <div class="faq-item open">
-            <button class="faq-question">
+            <button class="faq-question" type="button">
               <span class="label">How do I choose the right pergola contractor in Houston?</span>
               <span class="toggle">›</span>
             </button>
@@ -1243,7 +1212,7 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">
+            <button class="faq-question" type="button">
               <span class="label">What is the typical cost of a custom pergola or patio cover?</span>
               <span class="toggle">›</span>
             </button>
@@ -1255,111 +1224,39 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">Who is the best patio cover contractor in Houston?</span>
+            <button class="faq-question" type="button">
+              <span class="label">Can you add an outdoor kitchen or built-in BBQ under my pergola or patio cover?</span>
               <span class="toggle">›</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                The best patio cover contractor for you is the one who understands your goals and builds a structure that fits your home. Pergola Builder Houston focuses specifically on custom pergolas, patio covers and outdoor kitchens. We match roof lines and finishes, use quality materials and provide licensed, insured installation throughout the Houston area.
+                Yes. Many Houston homeowners choose a pergola or patio cover with an outdoor kitchen, built-in BBQ or bar seating. We can design the structure, run gas and electrical with licensed trades, and build the stone or stucco island so everything works together as one outdoor living space.
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">What is the difference between a pergola, patio cover, gazebo and arbor?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                A pergola is an open-roof structure with rafters that provide partial shade. A patio cover has a solid roof that keeps out sun and rain. A gazebo is a freestanding structure, often with a full roof and railings. An arbor is a smaller entry feature that frames a walkway or gate. We build wood pergolas, gazebos, arbors and solid patio covers so you can choose the right option for your yard.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">Can you extend an existing patio cover or wood pergola?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                In many cases we can extend an existing patio cover or wood pergola by adding new posts, beams and rafters that tie into the original structure. We will inspect the existing footings and framing first to make sure a pergola extension is safe. If your old structure was not built correctly, we may recommend replacing it instead of building on top of it.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">Do you build patio enclosures or screened outdoor rooms?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Our main focus is pergolas, patio covers and open-air outdoor living spaces. However, we can sometimes design a patio enclosure or screened room that connects to a new or existing cover. During your consultation we can compare a traditional pergola, solid patio cover and enclosure so you can choose the right level of shade and protection.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">Do you build outdoor kitchens and BBQ islands under pergolas?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Yes. Outdoor kitchens and built-in BBQ islands are some of our most popular projects. We can design an outdoor kitchen under a solid patio cover or pergola, run gas and electrical with licensed trades, and build the stone or stucco island so everything looks like it belongs with your home.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">Do you build both wood pergolas and aluminum pergolas?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Most of our projects are custom wood pergolas and patio covers that match the trim and fascia on your home. In some situations we can offer aluminum or composite options when low maintenance is a priority. We will walk you through the pros and cons of each material for Houston weather during your estimate.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span class="label">How long does a pergola or patio cover project usually take?</span>
-              <span class="toggle">›</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                Once permits and materials are ready, most pergola projects take only a few days of on-site work. More complex patio covers, gazebos, arbors and outdoor kitchen builds may take one to three weeks depending on size and design. We will give you a realistic schedule before we begin construction.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
+            <button class="faq-question" type="button">
               <span class="label">Do I need permits or HOA approval for a pergola in Houston?</span>
               <span class="toggle">›</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Some pergolas and many patio covers do require permits or HOA approval. As a pergola contractor we regularly work with local guidelines and can help with drawings, engineering details and paperwork so your project is approved before construction starts.
+                Some pergolas and many solid-roof patio covers require permits or HOA approval. As a patio and pergola contractor, we can help with drawings, engineering and paperwork so your project is approved before construction begins. We will review what is required based on your address and neighborhood.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- COMPANY INFO / CONTACT -->
-      <section class="company-info" id="company-info">
+      <!-- COMPANY INFO -->
+
+      <section class="company-info">
         <div>
           <h2>Company Info</h2>
           <p>
             Ready to add shade and function to your backyard? Reach out to Pergola Builder Houston for a no-pressure, on-site estimate. We’ll help you explore what’s possible with custom pergolas, patio covers and outdoor kitchens built for Houston homes.
           </p>
-
           <div class="company-grid">
             <div class="company-row">
               <span class="label">Company:</span>
@@ -1375,66 +1272,56 @@
             </div>
             <div class="company-row">
               <span class="label">Website:</span>
-              <span><a href="http://www.pergolabuilderhouston.com/">www.pergolabuilderhouston.com</a></span>
+              <span><a href="https://www.pergolabuilderhouston.com">www.pergolabuilderhouston.com</a></span>
             </div>
           </div>
-
           <div class="company-actions">
-            <a class="btn-primary" href="tel:+18325095457">Call for Free Estimate</a>
-            <a class="btn-ghost" href="#top">Back to Top</a>
+            <a href="tel:+18325095457" class="btn-primary">Call for Free Estimate</a>
+            <a href="#top" class="btn-ghost">Back to Top</a>
           </div>
         </div>
         <div class="company-side">
           <strong>Service Area:</strong><br />
-          Greater Houston, Katy, Cypress, Spring, The Woodlands, Sugar Land, Pearland &amp; nearby communities.<br /><br />
-          Custom pergolas, patio covers and outdoor kitchens professionally built to expand how you live outside your home.
+          Greater Houston, Katy, Cypress, Spring, The Woodlands, Sugar Land, Pearland &amp; nearby communities.
         </div>
       </section>
 
       <footer>
-        © <span id="year"></span> Pergola Builder Houston. All rights reserved.
-        · Built for Houston outdoor living. · <a href="/reviews">Read Reviews</a>
+        <p>
+          © <span id="year"></span> Pergola Builder Houston. All rights reserved.
+        </p>
       </footer>
     </main>
   </div>
 
   <script>
-    // FAQ accordion
-    document.querySelectorAll(".faq-item").forEach(function (item) {
-      var question = item.querySelector(".faq-question");
-      var answer = item.querySelector(".faq-answer");
-      question.addEventListener("click", function () {
-        var isOpen = item.classList.contains("open");
-        document.querySelectorAll(".faq-item").forEach(function (other) {
-          other.classList.remove("open");
-          var a = other.querySelector(".faq-answer");
-          if (a) a.style.maxHeight = null;
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+      var button = item.querySelector('.faq-question');
+      var answer = item.querySelector('.faq-answer');
+
+      button.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function (other) {
+          if (other !== item) {
+            other.classList.remove('open');
+            var otherAnswer = other.querySelector('.faq-answer');
+            if (otherAnswer) otherAnswer.style.maxHeight = 0;
+          }
         });
+
         if (!isOpen) {
-          item.classList.add("open");
-          answer.style.maxHeight = answer.scrollHeight + "px";
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          item.classList.remove('open');
+          answer.style.maxHeight = 0;
         }
       });
     });
 
-    // Initialize footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener("click", function (e) {
-        var targetId = this.getAttribute("href").slice(1);
-        if (!targetId) return;
-        var target = document.getElementById(targetId);
-        if (target) {
-          e.preventDefault();
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: "smooth"
-          });
-        }
-      });
-    });
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
