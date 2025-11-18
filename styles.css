@@ -1025,29 +1025,37 @@
   font-size: 0.95rem;
   color: #e5e7f3;
 }
+
+
 /* ============================
-   Recent Projects / Gallery
+   Recent Projects / Gallery (updated)
    ============================ */
 
 .gallery-section {
-  padding: 5rem 0;
-  background: #050b16; /* same dark band as the reviews section */
+  padding: 4rem 0;
+  background: #050b16;
 }
 
-.gallery-section .section-subtitle {
-  color: #c7d4ff;   /* light blue on dark bg */
+.gallery-section .section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.4rem; /* side spacing like rest of site */
 }
 
+.gallery-section .section-kicker {
+  color: #8fb4ff;
+}
 
-.gallery-section .section-header h2 {
+.gallery-section .section-title {
   color: #ffffff;
 }
 
-.gallery-section .section-intro {
+.gallery-section .section-subtitle {
   max-width: 720px;
-  color: #c7d4ff;
+  color: #c7d4ff;   /* light text on dark bg */
 }
 
+/* gallery grid */
 
 .gallery-grid {
   display: grid;
@@ -1101,14 +1109,14 @@
 .gallery-card-body h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #ffffff;      /* force white text */
 }
 
 .gallery-card-body p {
   margin: 0 0 1rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #d4ddff;
+  color: #d4ddff;      /* light text */
 }
 
 .gallery-card-link {
@@ -1151,5 +1159,5 @@
 .btn-gallery:hover {
   transform: translateY(-2px);
 }
-
-
+``` :contentReference[oaicite:0]{index=0}
+::contentReference[oaicite:1]{index=1}
