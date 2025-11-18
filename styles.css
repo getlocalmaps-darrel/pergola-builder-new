@@ -859,7 +859,7 @@
 .nav-links {
   position: absolute;
   top: 100%;
-  right: 1.4rem;
+  left: 1.4rem;      /* align with left side */
   margin-top: 0.4rem;
   background: #05070b;
   border-radius: 16px;
@@ -905,3 +905,4 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
+
