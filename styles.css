@@ -1034,6 +1034,11 @@
   background: #050b16; /* same dark band as the reviews section */
 }
 
+.gallery-section .section-subtitle {
+  color: #c7d4ff;   /* light blue on dark bg */
+}
+
+
 .gallery-section .section-header h2 {
   color: #ffffff;
 }
@@ -1042,6 +1047,7 @@
   max-width: 720px;
   color: #c7d4ff;
 }
+
 
 .gallery-grid {
   display: grid;
