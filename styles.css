@@ -1,5 +1,4 @@
-  <style>
-    :root {
+:root {
       --primary-blue: #2979ff;
       --primary-blue-dark: #1c55b8;
       --accent-blue-soft: #e3f0ff;
@@ -906,4 +905,3 @@
         grid-template-columns: minmax(0, 1fr);
       }
     }
-  </style>
