@@ -1161,3 +1161,21 @@
 }
 ``` :contentReference[oaicite:0]{index=0}
 ::contentReference[oaicite:1]{index=1}
+
+/* Fix gallery header/text on dark blue background */
+.gallery-section .section-kicker {
+  color: #8fb4ff;
+}
+
+.gallery-section .section-subtitle {
+  color: #d4ddff;
+}
+
+.gallery-card-body h3 {
+  color: #ffffff;
+}
+
+.gallery-card-body p {
+  color: #d4ddff;
+}
+
