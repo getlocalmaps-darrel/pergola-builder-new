@@ -86,29 +86,39 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header">
-      <div class="nav-inner">
-        <div class="brand">
-          <div class="brand-logo">
-            <img src="images/logo.png" alt="Pergola Builder Houston Logo" />
-          </div>
-          <div class="brand-text">
-            <span>Pergola Builder</span>
-            <span>Houston</span>
-          </div>
-        </div>
-        <nav class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#service-area">Areas We Serve</a>
-          <a href="#faq">FAQ</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-        <a class="nav-call" href="tel:+18325095457">
-          (832) 509-5457
-        </a>
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-logo">
+        <img src="images/logo.png" alt="Pergola Builder Houston Logo" />
       </div>
-    </header>
+      <div class="brand-text">
+        <span>Pergola Builder</span>
+        <span>Houston</span>
+      </div>
+    </div>
+
+    <!-- NEW: hamburger button -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#service-area">Areas We Serve</a>
+      <a href="#faq">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <a class="nav-call" href="tel:+18325095457">
+      (832) 509-5457
+    </a>
+  </div>
+</header>
+
 
     <!-- HERO -->
     <section class="hero" id="top">
@@ -477,3 +487,4 @@ if (navToggle && headerEl) {
   </script>
 </body>
 </html>
+
