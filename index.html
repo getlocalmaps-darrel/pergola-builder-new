@@ -468,6 +468,63 @@
       background: #f3f4f6;
     }
 
+    /* SERVICES (3 columns) */
+
+    .services-section {
+      margin-top: 2.4rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.4rem 1.3rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #dde4f3;
+      text-decoration: none;
+      color: inherit;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.11);
+      border-color: rgba(41, 121, 255, 0.4);
+      background: #f9fbff;
+    }
+
+    .service-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--primary-blue-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .service-title {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .service-text {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-cta {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--primary-blue-dark);
+    }
+
     /* WHY CHOOSE */
 
     .why-choose {
@@ -523,7 +580,7 @@
       max-height: 300px;
     }
 
-    /* AREA SECTION (the one we KEEP, with Areas We Serve + map) */
+    /* AREA SECTION */
 
     .area-section {
       display: grid;
@@ -732,20 +789,28 @@
     }
 
     footer {
-      text-align: center;
-      font-size: 0.85rem;
+      padding: 1.8rem 1.4rem 2.4rem;
       color: #6b7280;
-      padding: 1.5rem 1.4rem 2.2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.8rem;
+      align-items: center;
     }
 
     .footer-main {
+      font-size: 0.85rem;
       margin-bottom: 0.5rem;
     }
 
     .footer-credit {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.35rem;
       font-size: 0.8rem;
       color: #6b7280;
@@ -761,6 +826,20 @@
     .footer-logo {
       width: 110px;
       height: auto;
+    }
+
+    .footer-map {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: #ffffff;
+    }
+
+    .footer-map iframe {
+      width: 100%;
+      height: 220px;
+      border: 0;
+      display: block;
     }
 
     /* RESPONSIVE */
@@ -794,7 +873,8 @@
 
       .company-info,
       .why-choose,
-      .area-section {
+      .area-section,
+      .footer-inner {
         grid-template-columns: minmax(0, 1fr);
       }
 
@@ -804,6 +884,10 @@
 
       .company-side {
         text-align: left;
+      }
+
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -818,7 +902,7 @@
     }
   </style>
 
-  <!-- SCHEMA (kept same as before, trimmed to essentials) -->
+  <!-- SCHEMA (same as before, not touching knowsAbout / services etc) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1007,6 +1091,46 @@
         </div>
       </section>
 
+      <!-- SERVICES SECTION -->
+      <section class="services-section" id="services">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">Pergolas, Patio Covers & Outdoor Kitchens</h2>
+          <p class="section-subtitle">
+            Pergola Builder Houston focuses on three core outdoor living services designed for Houston backyards. Each service will have its own dedicated landing page with photos, FAQs and project details.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <a class="service-card" href="/pergolas-houston.html">
+            <div class="service-kicker">Custom Shade</div>
+            <div class="service-title">Pergolas &amp; Pergola Extensions</div>
+            <p class="service-text">
+              Freestanding and attached pergolas that add filtered shade over patios, pools and seating areas. Designed to match your home’s architecture and withstand Houston sun, wind and rain.
+            </p>
+            <div class="service-cta">View Pergola Details →</div>
+          </a>
+
+          <a class="service-card" href="/patio-covers-houston.html">
+            <div class="service-kicker">Solid Roof</div>
+            <div class="service-title">Patio Covers &amp; Covered Porches</div>
+            <p class="service-text">
+              Solid-roof patio covers tied into your existing roofline or built as a new structure. Ideal for year-round shade, outdoor TVs and fans, and creating a true outdoor living room.
+            </p>
+            <div class="service-cta">View Patio Cover Options →</div>
+          </a>
+
+          <a class="service-card" href="/outdoor-kitchens-houston.html">
+            <div class="service-kicker">Outdoor Living</div>
+            <div class="service-title">Outdoor Kitchens &amp; Grill Stations</div>
+            <p class="service-text">
+              Built-in grills, counter space, bar seating and storage under a pergola or patio cover. We coordinate stone, stucco, gas and electrical to create a complete outdoor kitchen zone.
+            </p>
+            <div class="service-cta">View Outdoor Kitchen Ideas →</div>
+          </a>
+        </div>
+      </section>
+
       <!-- WHY CHOOSE -->
       <section class="why-choose" id="why">
         <div class="why-choose-text">
@@ -1034,7 +1158,7 @@
         </div>
       </section>
 
-      <!-- AREAS WE SERVE (only one section now, with map) -->
+      <!-- AREAS WE SERVE -->
       <section class="area-section" id="service-area">
         <div class="area-copy">
           <div class="section-header">
@@ -1165,23 +1289,34 @@
           Greater Houston, Katy, Cypress, Spring, The Woodlands, Sugar Land, Pearland &amp; nearby communities.
         </div>
       </section>
-
-      <footer>
-        <p class="footer-main">
-          © <span id="year"></span> Pergola Builder Houston. All rights reserved.
-        </p>
-        <div class="footer-credit">
-          <span>Website Design and Chat GPT Marketing by</span>
-          <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
-              alt="Get Local Maps"
-              class="footer-logo"
-            />
-          </a>
-        </div>
-      </footer>
     </main>
+
+    <!-- FOOTER WITH MAP + CREDIT -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <p class="footer-main">
+            © <span id="year"></span> Pergola Builder Houston. All rights reserved.
+          </p>
+          <div class="footer-credit">
+            <span>Website Design and Chat GPT Marketing by</span>
+            <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
+                alt="Get Local Maps"
+                class="footer-logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script>
