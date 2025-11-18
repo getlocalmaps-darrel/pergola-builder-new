@@ -88,6 +88,14 @@
   <div class="page-shell">
 <header class="site-header">
   <div class="nav-inner">
+    <!-- Hamburger (top-left on mobile, hidden on desktop) -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Logo / brand -->
     <div class="brand">
       <div class="brand-logo">
         <img src="images/logo.png" alt="Pergola Builder Houston Logo" />
@@ -98,13 +106,7 @@
       </div>
     </div>
 
-    <!-- NEW: hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
+    <!-- Nav links -->
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#reviews">Reviews</a>
@@ -113,11 +115,13 @@
       <a href="/contact.html">Contact</a>
     </nav>
 
+    <!-- Call button -->
     <a class="nav-call" href="tel:+18325095457">
       (832) 509-5457
     </a>
   </div>
 </header>
+
 
 
     <!-- HERO -->
@@ -487,4 +491,5 @@ if (navToggle && headerEl) {
   </script>
 </body>
 </html>
+
 
