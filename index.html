@@ -48,6 +48,7 @@
       background: var(--bg-light);
       line-height: 1.7;
       font-size: 16.5px;
+      overflow-x: hidden; /* prevent sideways scroll/bounce */
     }
 
     p {
@@ -156,7 +157,7 @@
       font-weight: 600;
       font-size: 0.86rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      white-space: nowrap; /* keep phone number on one line */
+      white-space: nowrap;
     }
 
     main {
@@ -257,7 +258,7 @@
     .hero-meta span i {
       font-style: normal;
       font-size: 1rem;
-      color: #facc15; /* GOLD STAR */
+      color: #facc15; /* gold star */
     }
 
     .hero-actions {
@@ -311,30 +312,21 @@
       justify-content: flex-end;
     }
 
-    .hero-logo-floating {
-      width: 230px;
-      max-width: 60%;
-      filter:
-        drop-shadow(0 0 9px rgba(255, 255, 255, 0.9))
-        drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8));
+    .hero-video-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
     }
-	
-	.hero-video-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
 
-.hero-video-wrap iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
+    .hero-video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
     /* GENERAL SECTIONS */
 
@@ -531,100 +523,7 @@
       max-height: 300px;
     }
 
-    /* SERVICE AREA (MAIN SECTION WITH CITY PAGES + MAP) */
-
-    .section-inner.two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
-      gap: 1.9rem;
-      align-items: flex-start;
-    }
-
-    .service-area-content h2 {
-      font-family: "Montserrat", system-ui, sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      margin-bottom: 0.7rem;
-    }
-
-    .service-area-content p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 0.9rem;
-    }
-
-    .service-area-list {
-      list-style: none;
-      margin: 1rem 0 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.4rem 1rem;
-    }
-
-    .service-area-list a {
-      font-size: 0.94rem;
-      padding: 0.4rem 0.6rem;
-      border-radius: 999px;
-      background: #e3f0ff;
-      display: inline-block;
-      transition: background var(--transition-fast), transform var(--transition-fast);
-    }
-
-    .service-area-list a:hover {
-      background: #c7d8ff;
-      transform: translateY(-1px);
-    }
-
-    .service-area-note {
-      font-size: 0.9rem;
-      color: #4b5563;
-      margin-top: 0.6rem;
-    }
-
-    .service-area-map .map-card {
-      background: #ffffff;
-      border-radius: 22px;
-      padding: 1.4rem 1.3rem 1.2rem;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid #dde4f3;
-    }
-
-    .map-card h3 {
-      font-family: "Montserrat", system-ui, sans-serif;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.2rem;
-    }
-
-    .map-card p {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 0.9rem;
-    }
-
-    .map-embed-wrapper {
-      border-radius: 18px;
-      overflow: hidden;
-      margin-bottom: 0.8rem;
-    }
-
-    .map-embed-wrapper iframe {
-      display: block;
-      width: 100%;
-      height: 280px;
-      border: 0;
-    }
-
-    .map-caption {
-      font-size: 0.86rem;
-      color: #4b5563;
-      line-height: 1.5;
-    }
-
-    /* SECOND AREA SECTION + MAP */
+    /* AREA SECTION (the one we KEEP, with Areas We Serve + map) */
 
     .area-section {
       display: grid;
@@ -790,6 +689,11 @@
       color: #9ca3af;
     }
 
+    .company-row span:last-child a {
+      word-break: break-word;
+      overflow-wrap: anywhere; /* prevent bleed off screen */
+    }
+
     .company-actions {
       margin-top: 1.1rem;
       display: flex;
@@ -831,11 +735,32 @@
       text-align: center;
       font-size: 0.85rem;
       color: #6b7280;
-      padding: 1.5rem 1.4rem 0;
+      padding: 1.5rem 1.4rem 2.2rem;
     }
 
-    footer a {
-      color: #3b82f6;
+    .footer-main {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-credit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-credit a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #4b5563;
+    }
+
+    .footer-logo {
+      width: 110px;
+      height: auto;
     }
 
     /* RESPONSIVE */
@@ -856,11 +781,11 @@
       }
 
       .hero-media {
-        justify-content: center; /* center logo on mobile */
+        justify-content: center; /* center video on mobile */
       }
 
-      .hero-logo-floating {
-        max-width: 55%;
+      .hero-video-wrap {
+        max-width: 100%;
       }
 
       .nav-links {
@@ -880,18 +805,6 @@
       .company-side {
         text-align: left;
       }
-
-      .section-inner.two-column {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .service-area-map {
-        order: -1; /* show map first on mobile */
-      }
-
-      .service-area-list {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
 
     @media (max-width: 800px) {
@@ -905,7 +818,7 @@
     }
   </style>
 
-  <!-- SCHEMA (same as before, trimmed for brevity if you want you can keep your full version) -->
+  <!-- SCHEMA (kept same as before, trimmed to essentials) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1019,18 +932,17 @@
           </div>
         </div>
         <div class="hero-media">
-  <div class="hero-video-wrap">
-    <iframe
-      src="https://www.youtube.com/embed/5xa4r5MRosc?si=BmIOMxHdzPGaqWwz&rel=0&modestbranding=1"
-      title="Pergola Builder Houston - Project Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
-
+          <div class="hero-video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/5xa4r5MRosc?si=BmIOMxHdzPGaqWwz&rel=0&modestbranding=1"
+              title="Pergola Builder Houston - Project Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1122,67 +1034,8 @@
         </div>
       </section>
 
-      <!-- SERVICE AREA PAGES + MAP -->
-      <section id="service-area" class="section service-area">
-        <div class="section-inner two-column">
-          <div class="service-area-content">
-            <h2>Houston areas we build pergolas, patio covers &amp; outdoor kitchens</h2>
-            <p>
-              Pergola Builder Houston is a local, licensed and insured pergola contractor.
-              We are based in the Houston area and serve homeowners across the city and
-              surrounding suburbs with custom pergolas, patio covers, and outdoor kitchens.
-              Each city we work in has its own page with specific information, photos, and
-              details about how we design for that area.
-            </p>
-            <p>
-              Choose your area below to learn more about pergola and patio cover options
-              near you, then request a free estimate when you’re ready:
-            </p>
-
-            <ul class="service-area-list">
-              <li><a href="/houston-pergolas.html">Houston Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/katy-pergolas.html">Katy Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/cypress-pergolas.html">Cypress Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/spring-pergolas.html">Spring Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/the-woodlands-pergolas.html">The Woodlands Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/memorial-pergolas.html">Memorial Area Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/sugar-land-pergolas.html">Sugar Land Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/pearland-pergolas.html">Pearland Pergolas &amp; Patio Covers</a></li>
-              <li><a href="/league-city-pergolas.html">League City Pergolas &amp; Patio Covers</a></li>
-            </ul>
-
-            <p class="service-area-note">
-              If you don’t see your exact city listed, there’s a good chance we still serve your area.
-              Reach out and tell us where you’re located and what kind of pergola, patio cover,
-              or outdoor kitchen you have in mind.
-            </p>
-          </div>
-
-          <div class="service-area-map">
-            <div class="map-card">
-              <h3>Service Area Map</h3>
-              <p>Tap or zoom to explore our primary pergola &amp; patio cover service area.</p>
-              <div class="map-embed-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
-                        width="100%"
-                        height="280"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <p class="map-caption">
-                <strong>Pergola Builder Houston</strong><br>
-                Service Area: Houston, Katy, Cypress, Spring, The Woodlands, Memorial, Sugar Land, Pearland &amp; League City.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECOND AREA SECTION -->
-
-      <section class="area-section" id="houston-metro">
+      <!-- AREAS WE SERVE (only one section now, with map) -->
+      <section class="area-section" id="service-area">
         <div class="area-copy">
           <div class="section-header">
             <div class="section-kicker">Areas We Serve</div>
@@ -1314,9 +1167,19 @@
       </section>
 
       <footer>
-        <p>
+        <p class="footer-main">
           © <span id="year"></span> Pergola Builder Houston. All rights reserved.
         </p>
+        <div class="footer-credit">
+          <span>Website Design and Chat GPT Marketing by</span>
+          <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
+              alt="Get Local Maps"
+              class="footer-logo"
+            />
+          </a>
+        </div>
       </footer>
     </main>
   </div>
