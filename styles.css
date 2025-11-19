@@ -1178,4 +1178,23 @@
 .gallery-card-body p {
   color: #d4ddff;
 }
+/* Tighten space between hero and services */
+.hero {
+  margin-bottom: 0;        /* in case hero had a bottom margin */
+}
+
+.services-section {
+  padding-top: 1.5rem;     /* was probably larger (like 3–4rem) */
+  margin-top: 0;
+}
+
+/* Let the Services intro text use the full content width */
+.services-section .section-header {
+  max-width: 100%;
+}
+
+.services-section .section-subtitle {
+  max-width: 100%;
+}
+
 
