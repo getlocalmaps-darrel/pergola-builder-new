@@ -232,8 +232,20 @@
     yearEl.textContent = new Date().getFullYear();
   }
 </script>
-</body>
-</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Attach smooth scroll behavior to any link that goes to #top
+    document.querySelectorAll('a[href="#top"]').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
