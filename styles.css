@@ -640,7 +640,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      max-height: 300px;
     }
 
     /* AREA SECTION */
@@ -1227,24 +1226,82 @@
   flex: 1 1 320px;
 }
 
+/* === WHY CHOOSE US – text + photo columns, equal height === */
 
-/* Make the Why Choose Us image more vertical on desktop */
-.why-choose-photo {
+.why-choose {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  gap: 3rem;
+  align-items: stretch;         /* make both columns same height */
+}
+
+.why-choose-text {
+  flex: 1 1 380px;
+}
+
+.why-choose-photo {
+  flex: 0 0 380px;              /* width of the photo column */
+  display: flex;
 }
 
 .why-choose-main {
-  width: 100%;
-  max-width: 420px;        /* adjust wider/narrower if you like */
-  aspect-ratio: 3 / 4;     /* vertical shape: 3 wide x 4 tall */
+  flex: 1;
   border-radius: 24px;
-  overflow: hidden;        /* crop overflow so it looks clean */
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
 }
 
+/* IMPORTANT: image fills full column height */
 .why-choose-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* zoom/crop image to fill container */
+  object-fit: cover;            /* crop to fill vertical space */
+  display: block;
 }
+
+/* Mobile: stack text + photo */
+@media (max-width: 900px) {
+  .why-choose {
+    flex-direction: column;
+    padding: 3.5rem 1.5rem;
+  }
+
+  .why-choose-photo {
+    flex: none;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+  }
+
+  .why-choose-main img {
+    height: auto;               /* normal image on mobile */
+  }
+}
+
+
+/* Stack nicely on mobile */
+@media (max-width: 900px) {
+  .why-choose {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 1.5rem;
+  }
+
+  .why-choose-photo {
+    order: -1;              /* show photo above text on mobile */
+    max-width: 640px;
+    margin: 0 auto 2rem;
+  }
+
+  .why-choose-main {
+    height: auto;           /* let it size itself on small screens */
+  }
+
+  .why-choose-main img {
+    height: auto;
+  }
+}
+
+
+
+
