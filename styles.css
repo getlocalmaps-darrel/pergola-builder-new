@@ -51,33 +51,40 @@
    GLOBAL TOP REVIEW BAR
    ========================= */
 .top-review-bar {
-  /* existing styles... */
+  width: 100%;
+  background: #000000 !important;   /* force black bar */
+  border-bottom: 1px solid #222222;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.25rem 0.75rem;
+  box-sizing: border-box;
+  z-index: 50;
+
   display: flex;
   justify-content: center;
+  align-items: baseline;            /* align tops of stars + text */
+  gap: 0.4rem;
 
-  /* change this: */
-  align-items: baseline;   /* instead of center */
+  color: #ffffff;                   /* white text by default */
 }
 
 .top-review-bar .star-icons {
   font-size: 0.9rem;
   line-height: 1;
-  color: #ffc107;
+  color: #ffc107;                   /* gold stars */
   display: inline-flex;
-
-  /* NEW: nudge stars up a bit */
   position: relative;
-  top: -1px;               /* try -2px if you want them even higher */
+  top: -1px;                        /* nudge stars up; use -2px if needed */
 }
 
 .top-review-bar .review-text {
   line-height: 1;
   white-space: nowrap;
+  color: #ffffff;
 }
 
-
 .top-review-bar .review-link {
-  color: #ffffff;                   /* white link text */
+  color: #ffffff;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -93,9 +100,6 @@
     font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
     gap: 0.25rem;
-  }
-
-  .top-review-bar {
     flex-wrap: wrap;
     text-align: center;
   }
