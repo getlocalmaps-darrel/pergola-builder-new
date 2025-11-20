@@ -1513,7 +1513,7 @@
 .inner-intro .section-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.4rem; /* aligns with rest of site */
+  padding: 0 1.4rem; /* <-- this is making it narrower */
 }
 
 .inner-intro-card {
@@ -1553,11 +1553,12 @@
   margin-bottom: 0.45rem;
 }
 
-/* Mobile tweaks */
+/* Mobile */
 @media (max-width: 960px) {
-  .inner-intro {
-    padding: 2.5rem 0 1rem;
+  .inner-intro .section-inner {
+    padding: 0 1rem; /* <-- and this on mobile */
   }
+}
 
   .inner-intro .section-inner {
     padding: 0 1rem; /* match main() padding on mobile */
