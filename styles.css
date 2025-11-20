@@ -12,7 +12,10 @@
       --radius-xl: 26px;
       --max-width: 1180px;
       --transition-fast: 180ms ease-out;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
+
 
     * {
       box-sizing: border-box;
@@ -20,14 +23,15 @@
       padding: 0;
     }
 
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+body {
+      font-family: var(--font-sans);
       color: var(--text-main);
       background: var(--bg-light);
       line-height: 1.7;
       font-size: 16.5px;
       overflow-x: hidden; /* prevent sideways scroll/bounce */
     }
+
 
     p {
       font-size: 1rem;
@@ -153,13 +157,14 @@
       line-height: 1.1;
     }
 
-    .brand-text span:first-child {
-      font-family: "Montserrat", system-ui, sans-serif;
+.brand-text span:first-child {
+      font-family: var(--font-sans);
       letter-spacing: 0.11em;
       text-transform: uppercase;
       font-size: 0.8rem;
       color: #c5d2ff;
-    }
+}
+
 
     .brand-text span:last-child {
       font-weight: 600;
@@ -266,14 +271,15 @@
       min-height: 420px;
     }
 
-    .hero h1 {
-      font-family: "Montserrat", system-ui, sans-serif;
+.hero h1 {
+      font-family: var(--font-sans);
       font-size: clamp(2.3rem, 3vw + 1.2rem, 3.3rem);
       line-height: 1.1;
       margin-bottom: 0.75rem;
       letter-spacing: 0.03em;
       text-transform: uppercase;
-    }
+}
+
 
     .hero h1 span.accent {
       display: block;
@@ -408,12 +414,13 @@
       margin-bottom: 0.4rem;
     }
 
-    .section-title {
-      font-family: "Montserrat", system-ui, sans-serif;
+.section-title {
+      font-family: var(--font-sans);
       font-size: 1.7rem;
       letter-spacing: 0.03em;
       text-transform: uppercase;
-    }
+}
+
 
     .section-subtitle {
       font-size: 1rem;
@@ -628,11 +635,12 @@
       background: #f9fbff;
     }
 
-    .service-title {
-      font-family: "Montserrat", system-ui, sans-serif;
+.service-title {
+      font-family: var(--font-sans);
       font-size: 1.15rem;
       font-weight: 700;
-    }
+}
+
 
     .service-image {
       border-radius: 14px;
@@ -848,13 +856,14 @@
       align-items: center;
     }
 
-    .company-info h2 {
-      font-family: "Montserrat", system-ui, sans-serif;
+.company-info h2 {
+      font-family: var(--font-sans);
       font-size: 1.5rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-bottom: 0.6rem;
-    }
+}
+
 
     .company-info p {
       font-size: 0.98rem;
