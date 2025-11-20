@@ -1511,9 +1511,9 @@
 }
 
 .inner-intro .section-inner {
-  max-width: var(--max-width);
+  max-width: 1100px;     /* same container width as other white cards */
   margin: 0 auto;
-  padding: 0 1.4rem; /* <-- this is making it narrower */
+  padding: 0;            /* let <main> handle side padding */
 }
 
 .inner-intro-card {
@@ -1555,19 +1555,21 @@
 
 /* Mobile */
 @media (max-width: 960px) {
-  .inner-intro .section-inner {
-    padding: 0 1rem; /* <-- and this on mobile */
+  .inner-intro {
+    padding: 2.5rem 0 1rem;
   }
-}
 
   .inner-intro .section-inner {
-    padding: 0 1rem; /* match main() padding on mobile */
+    max-width: 100%;
+    margin: 0;
+    padding: 0;          /* same visual width as FAQ on mobile */
   }
 
   .inner-intro-card {
-    padding: 1.7rem 1.4rem 2rem;
+    padding: 1.7rem 1.2rem 2rem;
   }
 }
+
 
 
 
