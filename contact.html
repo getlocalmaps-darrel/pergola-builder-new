@@ -41,10 +41,9 @@
     <!-- Nav links -->
 <nav class="nav-links">
   <a href="/">Home</a>
-  <a href="/#services">Services</a>
   <a href="/reviews.html">Reviews</a>
-  <a href="/#service-area">Areas We Serve</a>
-  <a href="/#faq">FAQ</a>
+  <a href="/#services">Services</a>
+  <a href="/gallery.html">Gallery</a>
   <a href="/contact.html">Contact</a>
 </nav>
 
@@ -180,50 +179,67 @@
   </main>
 
 <script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Mobile nav toggle + close behavior
+  const navToggle = document.querySelector('.nav-toggle');
+  const headerEl = document.querySelector('.site-header');
+  const navLinks = document.querySelectorAll('.nav-links a');
 
-  const form = document.getElementById("lead-form");
-  const statusEl = document.getElementById("form-status");
+  if (navToggle && headerEl) {
+    // Toggle menu when hamburger is clicked
+    navToggle.addEventListener('click', (event) => {
+      event.stopPropagation(); // keep document click from immediately closing it
+      headerEl.classList.toggle('nav-open');
+    });
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    statusEl.style.display = "none";
-    statusEl.classList.remove("error");
+    // Close menu when any nav link is clicked (good for in-page anchors on mobile)
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        headerEl.classList.remove('nav-open');
+      });
+    });
 
-    const data = {
-      name: form.name.value.trim(),
-      phone: form.phone.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim()
-    };
+    // Close menu when clicking anywhere outside the nav / header
+    document.addEventListener('click', (event) => {
+      // Only care if the menu is actually open
+      if (!headerEl.classList.contains('nav-open')) return;
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+      // If the click is NOT inside the header/nav area, close the menu
+      if (!event.target.closest('.nav-inner')) {
+        headerEl.classList.remove('nav-open');
+      }
+    });
+  }
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var button = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+
+    button.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove('open');
+          var otherAnswer = other.querySelector('.faq-answer');
+          if (otherAnswer) otherAnswer.style.maxHeight = 0;
+        }
       });
 
-      if (res.ok) {
-        form.reset();
-        statusEl.textContent =
-          "Thank you! Your request has been sent. We’ll contact you as soon as possible.";
-        statusEl.style.display = "block";
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
       } else {
-        const body = await res.json().catch(() => ({}));
-        statusEl.textContent =
-          body.error || "Sorry, something went wrong. Please try again or call us.";
-        statusEl.classList.add("error");
-        statusEl.style.display = "block";
+        item.classList.remove('open');
+        answer.style.maxHeight = 0;
       }
-    } catch (err) {
-      statusEl.textContent =
-        "Network error. Please check your connection or call us at (832) 509-5457.";
-      statusEl.classList.add("error");
-      statusEl.style.display = "block";
-    }
+    });
   });
+
+  // footer year (safe if #year isn't on every page)
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
