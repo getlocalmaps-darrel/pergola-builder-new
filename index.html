@@ -35,8 +35,11 @@
       "@id": "https://www.pergolabuilderhouston.com/#website",
       "url": "https://www.pergolabuilderhouston.com/",
       "name": "Pergola Builder Houston",
-      "description": "Pergola Builder Houston designs and installs custom pergolas, patio covers and outdoor kitchens for homeowners across the greater Houston, Texas metro.",
-      "inLanguage": "en-US"
+      "description": "Pergola Builder Houston designs and builds custom pergolas, patio covers, outdoor kitchens and backyard shade structures for homeowners across the greater Houston, Texas area.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://www.pergolabuilderhouston.com/#localbusiness"
+      }
     },
     {
       "@type": [
@@ -52,14 +55,25 @@
       "url": "https://www.pergolabuilderhouston.com/",
       "telephone": "+1-832-509-5457",
       "priceRange": "$$$",
-      "description": "Pergola Builder Houston is a local outdoor living contractor focused on custom pergolas, patio covers and outdoor kitchens engineered for Houston backyards, HOA requirements and Gulf Coast weather.",
+      "description": "Houston-based outdoor living contractor specializing in custom pergolas, wood pergolas, patio covers, roof extensions, outdoor kitchens, grill and BBQ islands and covered patio spaces designed for Houston heat, humidity and HOA requirements.",
+      "sameAs": [
+        "https://www.instagram.com/patiopergolahouston/",
+        "https://www.youtube.com/channel/UCgsgEeexAmgb-qIOK8p3d_Q",
+        "https://www.yelp.com/biz/pergola-builder-houston-houston",
+        "https://maps.app.goo.gl/pnkNr2219sCbLK9k6"
+      ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Service-Area Business",
+        "streetAddress": "Service-area business (no public showroom)",
         "addressLocality": "Houston",
         "addressRegion": "TX",
         "postalCode": "77007",
         "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7604,
+        "longitude": -95.3698
       },
       "areaServed": [
         { "@type": "City", "name": "Houston" },
@@ -72,18 +86,38 @@
         { "@type": "City", "name": "League City" },
         { "@type": "City", "name": "Memorial" }
       ],
+      "serviceArea": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoShape",
+          "circle": "29.7604 -95.3698 50"
+        }
+      },
       "knowsAbout": [
-        "pergolas",
-        "custom pergola builder",
+        "pergola contractor",
+        "pergola builder",
+        "custom pergolas",
+        "modern pergolas",
+        "wood pergolas",
+        "cedar pergolas",
+        "attached pergolas",
+        "freestanding pergolas",
+        "poolside pergolas",
         "patio covers",
         "aluminum patio covers",
-        "outdoor kitchens",
-        "grill islands and BBQ stations",
-        "backyard shade structures",
         "covered patios",
-        "Houston outdoor living contractor",
+        "patio roof extensions",
+        "outdoor kitchen contractor",
+        "outdoor kitchen design",
+        "outdoor kitchens",
+        "outdoor BBQ islands",
+        "grill islands",
+        "BBQ countertops",
+        "Houston pergola contractor",
+        "Houston patio cover company",
+        "Houston outdoor kitchen builder",
         "deck and pergola combinations",
-        "pergolas for pool and spa areas"
+        "backyard shade structures"
       ],
       "openingHoursSpecification": [
         {
@@ -102,8 +136,12 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
+        "@id": "https://www.pergolabuilderhouston.com/#aggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "32"
+        "reviewCount": "32",
+        "itemReviewed": {
+          "@id": "https://www.pergolabuilderhouston.com/#localbusiness"
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -115,7 +153,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Custom Pergolas",
-              "serviceType": "Design and construction of custom pergolas for Houston backyards.",
+              "serviceType": "Design and construction of custom wood and aluminum pergolas for Houston backyards, pools and patios.",
               "areaServed": [
                 { "@type": "City", "name": "Houston" },
                 { "@type": "City", "name": "Katy" },
@@ -124,8 +162,7 @@
                 { "@type": "City", "name": "The Woodlands" },
                 { "@type": "City", "name": "Sugar Land" },
                 { "@type": "City", "name": "Pearland" },
-                { "@type": "City", "name": "League City" },
-                { "@type": "City", "name": "Memorial" }
+                { "@type": "City", "name": "League City" }
               ],
               "provider": {
                 "@id": "https://www.pergolabuilderhouston.com/#localbusiness"
@@ -137,18 +174,15 @@
             "category": "Patio Covers",
             "itemOffered": {
               "@type": "Service",
-              "name": "Patio Covers & Shade Structures",
-              "serviceType": "Engineered patio covers, roof extensions and shade structures built to match your home and meet HOA requirements.",
+              "name": "Patio Covers & Roof Extensions",
+              "serviceType": "Engineered patio covers, roof extensions and shade structures designed to match existing homes and meet Houston-area HOA requirements.",
               "areaServed": [
                 { "@type": "City", "name": "Houston" },
                 { "@type": "City", "name": "Katy" },
                 { "@type": "City", "name": "Cypress" },
                 { "@type": "City", "name": "Spring" },
                 { "@type": "City", "name": "The Woodlands" },
-                { "@type": "City", "name": "Sugar Land" },
-                { "@type": "City", "name": "Pearland" },
-                { "@type": "City", "name": "League City" },
-                { "@type": "City", "name": "Memorial" }
+                { "@type": "City", "name": "Sugar Land" }
               ],
               "provider": {
                 "@id": "https://www.pergolabuilderhouston.com/#localbusiness"
@@ -160,18 +194,14 @@
             "category": "Outdoor Kitchens",
             "itemOffered": {
               "@type": "Service",
-              "name": "Outdoor Kitchens & Grill Islands",
-              "serviceType": "Outdoor kitchen islands, built-in grills and countertop spaces for cooking and entertaining outdoors.",
+              "name": "Outdoor Kitchens & BBQ Islands",
+              "serviceType": "Design and build of custom outdoor kitchens, grill islands, BBQ stations and entertainment counters for Houston patios and backyards.",
               "areaServed": [
                 { "@type": "City", "name": "Houston" },
                 { "@type": "City", "name": "Katy" },
                 { "@type": "City", "name": "Cypress" },
                 { "@type": "City", "name": "Spring" },
-                { "@type": "City", "name": "The Woodlands" },
-                { "@type": "City", "name": "Sugar Land" },
-                { "@type": "City", "name": "Pearland" },
-                { "@type": "City", "name": "League City" },
-                { "@type": "City", "name": "Memorial" }
+                { "@type": "City", "name": "The Woodlands" }
               ],
               "provider": {
                 "@id": "https://www.pergolabuilderhouston.com/#localbusiness"
@@ -180,10 +210,40 @@
           }
         ]
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.pergolabuilderhouston.com/#recent-jobs",
+      "name": "Recent Outdoor Kitchen and Pergola Projects - Pergola Builder Houston",
+      "description": "Recent outdoor kitchen, pergola and patio cover projects completed in Houston, Katy, Cypress, Cinco Ranch, Richmond, Sealy and surrounding Texas communities.",
+      "url": "https://www.pergolabuilderhouston.com/#recent-jobs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.pergolabuilderhouston.com/richmond-outdoor-kitchen-job.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.pergolabuilderhouston.com/katy-outdoor-kitchen-job.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.pergolabuilderhouston.com/cinco-ranch-outdoor-bbq-island-job.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.pergolabuilderhouston.com/sealy-outdoor-kitchen-bbq-job.html"
+        }
+      ]
     }
   ]
 }
 </script>
+
 </head>
 <body>
   <div class="page-shell">
