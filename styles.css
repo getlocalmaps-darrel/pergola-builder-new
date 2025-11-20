@@ -47,33 +47,39 @@
       min-height: 100vh;
     }
 	
-	/* =========================
+/* =========================
    GLOBAL TOP REVIEW BAR
    ========================= */
 .top-review-bar {
   width: 100%;
-  background: #fff7e0;           /* light, subtle highlight */
-  border-bottom: 1px solid #f0e0b2;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  text-align: center;
-  padding: 0.35rem 1rem;
+  background: #000000;              /* black bar */
+  border-bottom: 1px solid #222222;
+  font-size: 0.8rem;                /* smaller text */
+  line-height: 1.2;
+  padding: 0.2rem 0.75rem;          /* skinnier bar */
   box-sizing: border-box;
   z-index: 50;
+
+  display: flex;                    /* center & align */
+  justify-content: center;
+  align-items: center;
 }
 
 .top-review-bar a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   text-decoration: none;
-  color: #333333;
+  color: #f5f5f5;                   /* light text on black */
   font-weight: 500;
 }
 
 .top-review-bar .star-icons {
   font-size: 0.9rem;
+  line-height: 1;
+  color: #ffc107;                   /* gold stars */
+  display: inline-flex;
 }
 
 .top-review-bar .review-text {
@@ -82,8 +88,8 @@
 
 @media (max-width: 480px) {
   .top-review-bar {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.18rem 0.5rem;
   }
 
   .top-review-bar a {
@@ -93,8 +99,10 @@
 
   .top-review-bar .review-text {
     white-space: normal;
+    text-align: center;
   }
 }
+
 
 
     /* HEADER */
