@@ -1463,6 +1463,46 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* ==================================
+   SERVICE PAGE HERO – COMPACT
+   ================================== */
+
+/* compact height */
+.hero.hero-subpage {
+  padding: 2.2rem 1.5rem 1.8rem;   /* smaller top/bottom padding */
+}
+
+/* let content control height, no big min-height */
+.hero.hero-subpage .hero-inner {
+  min-height: 0;
+}
+
+/* slightly smaller heading + tighter spacing */
+.hero.hero-subpage h1 {
+  font-size: clamp(1.8rem, 2vw + 0.9rem, 2.3rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero.hero-subpage p.lead {
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero.hero-subpage .hero-meta {
+  margin-bottom: 0.8rem;
+}
+
+/* optional: a bit tighter buttons row */
+.hero.hero-subpage .hero-actions {
+  margin-bottom: 0.5rem;
+}
+
+/* mobile tweak */
+@media (max-width: 960px) {
+  .hero.hero-subpage {
+    padding: 2rem 1.25rem 1.6rem;
+  }
+}
 
 
 
