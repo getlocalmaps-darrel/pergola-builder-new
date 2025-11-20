@@ -1503,6 +1503,70 @@
     padding: 2rem 1.25rem 1.6rem;
   }
 }
+/* =========================
+   SERVICE DETAIL INTRO (Houston Pergolas page)
+   ========================= */
+.inner-intro {
+  padding: 3rem 0 1rem;
+}
+
+.inner-intro .section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.4rem; /* aligns with rest of site */
+}
+
+.inner-intro-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  padding: 2.2rem 2rem 2.4rem;
+}
+
+.inner-intro .section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: var(--primary-blue-dark);
+  margin-bottom: 0.4rem;
+}
+
+.inner-intro .section-title {
+  margin-bottom: 0.8rem;
+}
+
+.inner-intro .section-subtitle {
+  max-width: 40rem;
+  margin-bottom: 1.4rem;
+}
+
+.inner-intro-body p {
+  margin-bottom: 1rem;
+}
+
+.inner-intro-body ul {
+  margin: 1rem 0 1.4rem 1.2rem;
+  padding-left: 0;
+}
+
+.inner-intro-body li {
+  margin-bottom: 0.45rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 960px) {
+  .inner-intro {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .inner-intro .section-inner {
+    padding: 0 1rem; /* match main() padding on mobile */
+  }
+
+  .inner-intro-card {
+    padding: 1.7rem 1.4rem 2rem;
+  }
+}
 
 
 
