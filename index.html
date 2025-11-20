@@ -304,19 +304,18 @@
             </a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="hero-video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/5xa4r5MRosc?si=BmIOMxHdzPGaqWwz&rel=0&modestbranding=1"
-              title="Pergola Builder Houston - Project Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
+<div class="hero-media">
+  <div class="hero-video-wrap">
+    <button class="video-placeholder" type="button" data-youtube-id="5xa4r5MRosc">
+      <img
+        src="images/hero-main.jpg"
+        alt="Pergola Builder Houston project highlight video"
+        loading="lazy"
+      />
+      <span class="video-play-icon">▶</span>
+    </button>
+  </div>
+</div>
       </div>
     </section>
 
@@ -898,5 +897,28 @@
     });
   </script>
   <script src="review-bar.js" defer></script>
+  <script>
+  // Lazy YouTube embed: replace placeholder with real iframe on click
+  document.querySelectorAll('.video-placeholder').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-youtube-id');
+      if (!id) return;
+
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&autoplay=1';
+      iframe.title = 'Pergola Builder Houston - Project Video';
+      iframe.loading = 'lazy';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.border = '0';
+
+      btn.replaceWith(iframe);
+    });
+  });
+</script>
+
 </body>
 </html>
