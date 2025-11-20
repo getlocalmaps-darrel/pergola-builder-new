@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
     bar.className = 'top-review-bar';
 
     // NOTE: Update href if your reviews page is named differently
-    bar.innerHTML =
-      '<a href="/reviews.html" aria-label="Read 126 customer reviews">' +
-        '<span class="star-icons">★★★★★</span>' +
-        '<span class="review-text">5.0 rating · 126 homeowner reviews</span>' +
-      '</a>';
+bar.innerHTML =
+  '<span class="star-icons" aria-hidden="true">★★★★★</span>' +
+  '<span class="review-text">5.0 rating · ' +
+    '<a href="/reviews.html" class="review-link" aria-label="Read 126 homeowner reviews">' +
+      '126 homeowner reviews' +
+    '</a>' +
+  '</span>';
+
+
 
     if (anchorEl.parentNode) {
       anchorEl.parentNode.insertBefore(bar, anchorEl.nextSibling);
