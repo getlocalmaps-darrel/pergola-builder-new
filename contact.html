@@ -67,43 +67,42 @@
               <h2>Request Your Free Estimate</h2>
               <p>Tell us a little about your project and we’ll follow up with details.</p>
 
-              <form id="lead-form" class="form-grid">
-                <div>
-                  <label for="name">Name *</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
+<form id="lead-form" class="form-grid">
+  <div>
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
-                <div>
-                  <label for="phone">Phone *</label>
-                  <input type="tel" id="phone" name="phone" required />
-                </div>
+  <div>
+    <label for="phone">Phone *</label>
+    <input type="tel" id="phone" name="phone" required />
+  </div>
 
-                <div class="form-field-full">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
+  <div class="form-field-full">
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-                <div class="form-field-full">
-                  <label for="message">Project Details *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your patio, pergola, or outdoor kitchen project..."
-                    required
-                  ></textarea>
-                </div>
+  <div class="form-field-full">
+    <label for="message">Project Details *</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Tell us about your patio, pergola, or outdoor kitchen project..."
+      required
+    ></textarea>
+  </div>
 
-                <div class="form-field-full">
-                  <button class="btn-primary" type="submit">
-                    Send My Request
-                  </button>
-                  <div
-                    id="form-status"
-                    class="form-status"
-                    style="margin-top:0.5rem;font-size:0.9rem;"
-                  ></div>
-                </div>
-              </form>
+  <div class="form-field-full">
+    <button class="btn-primary" type="submit">Send My Request</button>
+    <div
+      id="form-status"
+      class="form-status"
+      style="margin-top:0.5rem;font-size:0.9rem;color:#111;"
+    ></div>
+  </div>
+</form>
+
             </div>
           </div>
         </div>
@@ -115,46 +114,59 @@
   <script src="review-bar.js" defer></script>
 
   <!-- CONTACT FORM SCRIPT (this is the only JS you need for the form) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.getElementById('lead-form');
-      const statusEl = document.getElementById('form-status');
-      if (!form || !statusEl) return;
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('lead-form');
+  const statusEl = document.getElementById('form-status');
+  if (!form || !statusEl) {
+    console.log('Contact form or status element not found');
+    return;
+  }
 
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-        statusEl.textContent = 'Sending...';
+    statusEl.textContent = 'Sending...';
 
-        const payload = {
-          name: form.name.value.trim(),
-          phone: form.phone.value.trim(),
-          email: form.email.value.trim(),
-          message: form.message.value.trim()
-        };
+    const payload = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
 
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-
-          // If the server responds at all, show thank you
-          if (res.ok) {
-            statusEl.textContent = "Thank you! We'll reach out soon.";
-            form.reset();
-          } else {
-            statusEl.textContent =
-              'Something went wrong. Please call us or try again.';
-          }
-        } catch (err) {
-          console.error('Network error:', err);
-          statusEl.textContent =
-            'Network error. Please check your connection and try again.';
-        }
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
-    });
-  </script>
+
+      console.log('Contact response status:', res.status);
+
+      let data = null;
+      try {
+        data = await res.json();
+      } catch (err) {
+        console.log('No JSON in response');
+      }
+
+      if (res.ok) {
+        statusEl.textContent = "Thank you! We'll reach out soon.";
+        form.reset();
+      } else {
+        statusEl.textContent =
+          (data && (data.error || data.message)) ||
+          'Something went wrong. Please call us or try again.';
+      }
+    } catch (err) {
+      console.error('Network error submitting contact form:', err);
+      statusEl.textContent =
+        'Network error. Please check your connection and try again.';
+    }
+  });
+});
+</script>
+
 </body>
 </html>

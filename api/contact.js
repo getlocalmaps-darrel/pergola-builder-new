@@ -21,8 +21,8 @@ export default async function handler(req, res) {
 
   try {
     const emailData = {
-      // IMPORTANT: use your verified Resend domain here
-      // Example if your verified domain is pergolabuilderhouston.com:
+      // 👇 use your verified Resend domain here
+      // if your verified domain is different, change ONLY the part after @
       from: "Pergola Builder Houston <forms@pergolabuilderhouston.com>",
       to: [
         "chavezdarrel@yahoo.com",
