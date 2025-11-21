@@ -30,7 +30,8 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "Pergola Builder Houston <onboarding@resend.dev>",
-to: ["getlocalmaps@gmail.com"],               // <— send to your Resend account email
+to: ['chavezdarrel@yahoo.com', 'ed@frontlineconstructionhtx.com']               // <— send to your Resend account email
+
 subject: "Pergola Builder Houston Lead",
 reply_to: email,                              // <— so hitting Reply goes to the customer
 text: `
