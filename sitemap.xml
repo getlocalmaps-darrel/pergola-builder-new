@@ -122,5 +122,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+    <url>
+    <loc>https://www.pergolabuilderhouston.com/richmond-pergolas.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
