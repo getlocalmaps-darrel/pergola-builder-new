@@ -17,7 +17,10 @@ export default async function handler(req, res) {
     console.error("Missing RESEND_API_KEY environment variable");
     return res
       .status(500)
-      .json({ error: "Email service not configured. Please try again later." });
+      .json({
+        error:
+          "Email service not configured. Please try again later."
+      });
   }
 
   try {
@@ -30,11 +33,13 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "Pergola Builder Houston <onboarding@resend.dev>",
-to: ['chavezdarrel@yahoo.com', 'ed@frontlineconstructionhtx.com']               // <— send to your Resend account email
-
-subject: "Pergola Builder Houston Lead",
-reply_to: email,                              // <— so hitting Reply goes to the customer
-text: `
+        to: [
+          "chavezdarrel@yahoo.com",
+          "ed@frontlineconstructionhtx.com"
+        ], // send to both you and Ed
+        subject: "Pergola Builder Houston Lead",
+        reply_to: email, // hitting Reply goes to the customer
+        text: `
 New Pergola Builder Houston Lead
 
 Name: ${name}
@@ -44,7 +49,6 @@ Email: ${email}
 Project details:
 ${message}
         `.trim()
-
       })
     });
 
@@ -74,7 +78,7 @@ ${message}
       });
     }
 
-    // Success
+    // Success – front-end can show thank-you
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error sending lead email:", error);
@@ -84,4 +88,3 @@ ${message}
     });
   }
 }
-
