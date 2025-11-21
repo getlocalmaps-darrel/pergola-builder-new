@@ -1,0 +1,47 @@
+# Local Business Directory Section
+
+This /local-business/ folder is a small local business directory hosted on the Pergola Builder Houston domain.
+
+The primary company for this domain is:
+- Pergola Builder Houston: a contractor focused on pergolas, patio covers, and outdoor kitchens in the Houston, TX area.
+
+The /local-business/ section is separate. It lists independent local businesses as citation-style references. The example below is an independent moving company.
+
+## Pack It Movers Katy (Independent Moving Company)
+
+Business:
+- Name: Pack It Movers Katy
+- Category: MovingCompany (movers and storage, not construction)
+- Website: https://packitmovers.com/katy-moving-storage/
+- Address: 6193 Hwy Blvd #101, Katy, TX 77494
+- Phone: (281) 392-7225
+
+Profile page on this directory:
+- https://www.pergolabuilderhouston.com/local-business/pack-it-movers/
+
+Related citation pages for Katy, TX moving keywords:
+- Movers Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/movers-katy.html
+
+- Apartment Movers Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/apartment-movers-katy.html
+
+- Moving and Storage Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-and-storage-katy.html
+
+- Senior Movers Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/senior-movers-katy.html
+
+- Long Distance Movers Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/long-distance-movers-katy.html
+
+- Office Movers Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/office-movers-katy.html
+
+- Packing Services Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/packing-services-katy.html
+
+- Moving Help Katy TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-help-katy.html
+
+These pages are intended for use as local citation/reference sources about Pack It Movers Katy only. Pergola Builder Houston remains a construction contractor (pergolas, patio covers, outdoor kitchens) and does not perform moving services.
