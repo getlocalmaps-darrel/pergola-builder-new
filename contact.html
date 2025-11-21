@@ -4,301 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Pergola Builder Houston | (832) 509-5457</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-  <meta name="description" content="Contact Pergola Builder Houston to schedule a free estimate for custom pergolas, patio covers and outdoor kitchens across the Houston area." />
+
+  <meta
+    name="description"
+    content="Contact Pergola Builder Houston to schedule a free estimate for pergolas, patio covers and outdoor kitchens across the Houston area."
+  />
   <meta name="robots" content="index, follow" />
 
-  <!-- Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Fonts (same as other pages) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Shared site styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-<header class="site-header" id="top">
-  <div class="nav-inner">
-    <!-- Hamburger (top-left on mobile, hidden on desktop) -->
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Logo / brand -->
-    <div class="brand">
-      <div class="brand-logo">
-        <img src="images/logo.jpg" alt="Pergola Builder Houston Logo">
-      </div>
-      <div class="brand-text">
-        <span>Pergola Builder</span>
-        <span>Houston</span>
-      </div>
+  <!-- SIMPLE HEADER (you can tweak later if you want) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="/" class="site-logo">Pergola Builder Houston</a>
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/houston-pergolas.html">Pergolas</a>
+        <a href="/outdoor-kitchens-houston.html">Outdoor Kitchens</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+      </nav>
     </div>
-
-    <!-- Nav links -->
-<nav class="nav-links">
-  <a href="/">Home</a>
-  <a href="/reviews.html">Reviews</a>
-  <a href="/#services">Services</a>
-  <a href="/gallery.html">Gallery</a>
-  <a href="/contact.html">Contact</a>
-</nav>
-
-
-    <!-- Call button -->
-    <a class="nav-call" href="tel:+18325095457">
-      (832) 509-5457
-    </a>
-  </div>
-</header>
-
-
+  </header>
 
   <main>
-    <div class="page-title">
-      <div class="page-kicker">Contact Us</div>
-      <h1 class="page-heading">Request Your Free Outdoor Living Estimate</h1>
-      <p class="page-subtitle">
-        Tell us a little about your backyard and we’ll follow up to schedule a convenient time to look at your space, answer questions and provide a written estimate.
-      </p>
-    </div>
+    <section class="inner-intro">
+      <div class="section-inner inner-intro-card">
+        <div class="inner-intro-layout">
+          <!-- LEFT SIDE: INFO -->
+          <div class="inner-intro-copy">
+            <h1>Get in Touch</h1>
+            <p>
+              Fill out the form and we’ll reach out as soon as possible about
+              your pergola, patio cover, or outdoor kitchen project in the
+              greater Houston area.
+            </p>
 
-    <div class="contact-layout">
-      <section class="contact-card">
-        <p class="contact-info">
-          <strong>Pergola Builder Houston</strong> is a service-area contractor based in Houston, TX 77007. We design and build custom pergolas, patio covers and outdoor kitchens throughout the greater Houston metro.
-        </p>
-        <ul class="info-list">
-          <li><span class="label">Phone:</span> <a href="tel:+18325095457">(832) 509-5457</a></li>
-          <li><span class="label">Service Area:</span> Houston, Katy, Cypress, Spring, The Woodlands, Sugar Land, Pearland, League City, Memorial and nearby communities.</li>
-          <li><span class="label">Hours:</span> Monday–Saturday · By appointment</li>
-        </ul>
-      </section>
-
-      <section class="contact-form">
-        <h2>Get in Touch</h2>
-        <p>Fill out the form below and we’ll reach out as soon as possible about your pergola, patio cover or outdoor kitchen project.</p>
-
-        <!--
-          IMPORTANT:
-          1) Replace FORM_ENDPOINT with your real form handler URL (for example a Formspree endpoint).
-          2) In your form service dashboard, set the destination email to: chavezdarrel@yahoo.com
-        -->
-        <form id="lead-form" class="form-grid">
-  <div>
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="name" required />
-  </div>
-
-  <div>
-    <label for="phone">Phone *</label>
-    <input type="tel" id="phone" name="phone" required />
-  </div>
-
-  <div class="form-field-full">
-    <button
-      class="btn-primary"
-      type="button"
-      onclick="handleLeadSubmit(event)"
-    >
-      Send My Request
-    </button>
-    <div
-      id="form-status"
-      style="margin-top:0.5rem;font-size:0.9rem;color:#111;"
-    ></div>
-  </div>
-
-
-  <div class="form-field-full">
-    <label for="message">Project Details *</label>
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Tell us about your patio, pergola, or outdoor kitchen project..."
-      required
-    ></textarea>
-  </div>
-
-  <div class="form-field-full">
-    <button class="btn-primary" type="submit">Send My Request</button>
-    <div id="form-status" class="form-status"></div>
-  </div>
-</form>
-
-      </section>
-    </div>
-
-	      <!-- COMPANY INFO -->
-      <section class="company-info">
-        <div>
-          <h2>Company Info</h2>
-          <p>
-            Ready to add shade and function to your backyard? Reach out to Pergola Builder Houston for a no-pressure, on-site estimate. We’ll help you explore what’s possible with custom pergolas, patio covers and outdoor kitchens built for Houston homes.
-          </p>
-          <div class="company-grid">
-            <div class="company-row">
-              <span class="label">Company:</span>
-              <span>Pergola Builder Houston</span>
-            </div>
-            <div class="company-row">
-              <span class="label">Address:</span>
-              <span>Houston, TX 77007 · Service-area contractor (no public showroom)</span>
-            </div>
-            <div class="company-row">
-              <span class="label">Phone:</span>
-              <span><a href="tel:+18325095457">(832) 509-5457</a></span>
-            </div>
-            <div class="company-row">
-              <span class="label">Website:</span>
-              <span><a href="https://www.pergolabuilderhouston.com">www.pergolabuilderhouston.com</a></span>
+            <div class="contact-details">
+              <p><strong>Phone:</strong> <a href="tel:18325095457">(832) 509-5457</a></p>
+              <p><strong>Email:</strong> info@pergolabuilderhouston.com</p>
+              <p><strong>Service Area:</strong> Houston, Katy, Cypress, Spring,
+                The Woodlands, Sugar Land, Pearland, League City, Memorial and
+                nearby communities.</p>
             </div>
           </div>
-          <div class="company-actions">
-            <a href="tel:+18325095457" class="btn-primary">Call for Free Estimate</a>
-            <a href="#top" class="btn-ghost">Back to Top</a>
+
+          <!-- RIGHT SIDE: FORM -->
+          <div class="inner-intro-form">
+            <div class="card">
+              <h2>Request Your Free Estimate</h2>
+              <p>Tell us a little about your project and we’ll follow up with details.</p>
+
+              <form id="lead-form" class="form-grid">
+                <div>
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div>
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+
+                <div class="form-field-full">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-field-full">
+                  <label for="message">Project Details *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your patio, pergola, or outdoor kitchen project..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-field-full">
+                  <button class="btn-primary" type="submit">
+                    Send My Request
+                  </button>
+                  <div
+                    id="form-status"
+                    class="form-status"
+                    style="margin-top:0.5rem;font-size:0.9rem;"
+                  ></div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="company-side">
-          <div class="company-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542599.9238474895!2d-99.1770172673367!3d29.876665582490542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf355cb4fdd5%3A0x14c63eaa6f2b92ae!2sPergola%20Builder%20Houston!5e0!3m2!1sen!2sus!4v1763162884209!5m2!1sen!2sus"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen></iframe>
-          </div>
-        </div>
-      </section>
-	  <footer>
-  <p class="footer-main">
-    © <span id="year"></span> Pergola Builder Houston. All rights reserved.
-  </p>
-  <div class="footer-credit">
-    <span>Website Design and Chat GPT Marketing by</span>
-    <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer">
-      <img
-        src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
-        alt="Get Local Maps"
-        class="footer-logo"
-      />
-    </a>
-  </div>
-</footer>
+      </div>
+    </section>
   </main>
 
-<script>
-  // Mobile nav toggle + close behavior
-  const navToggle = document.querySelector('.nav-toggle');
-  const headerEl = document.querySelector('.site-header');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  <!-- If you use this on other pages, leave it. Otherwise safe to keep. -->
+  <script src="review-bar.js" defer></script>
 
-  if (navToggle && headerEl) {
-    // Toggle menu when hamburger is clicked
-    navToggle.addEventListener('click', (event) => {
-      event.stopPropagation(); // keep document click from immediately closing it
-      headerEl.classList.toggle('nav-open');
-    });
+  <!-- CONTACT FORM SCRIPT (this is the only JS you need for the form) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('lead-form');
+      const statusEl = document.getElementById('form-status');
+      if (!form || !statusEl) return;
 
-    // Close menu when any nav link is clicked (good for in-page anchors on mobile)
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        headerEl.classList.remove('nav-open');
-      });
-    });
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
 
-    // Close menu when clicking anywhere outside the nav / header
-    document.addEventListener('click', (event) => {
-      // Only care if the menu is actually open
-      if (!headerEl.classList.contains('nav-open')) return;
+        statusEl.textContent = 'Sending...';
 
-      // If the click is NOT inside the header/nav area, close the menu
-      if (!event.target.closest('.nav-inner')) {
-        headerEl.classList.remove('nav-open');
-      }
-    });
-  }
+        const payload = {
+          name: form.name.value.trim(),
+          phone: form.phone.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim()
+        };
 
-  // FAQ toggle
-  document.querySelectorAll('.faq-item').forEach(function (item) {
-    var button = item.querySelector('.faq-question');
-    var answer = item.querySelector('.faq-answer');
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
 
-    button.addEventListener('click', function () {
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function (other) {
-        if (other !== item) {
-          other.classList.remove('open');
-          var otherAnswer = other.querySelector('.faq-answer');
-          if (otherAnswer) otherAnswer.style.maxHeight = 0;
+          // If the server responds at all, show thank you
+          if (res.ok) {
+            statusEl.textContent = "Thank you! We'll reach out soon.";
+            form.reset();
+          } else {
+            statusEl.textContent =
+              'Something went wrong. Please call us or try again.';
+          }
+        } catch (err) {
+          console.error('Network error:', err);
+          statusEl.textContent =
+            'Network error. Please check your connection and try again.';
         }
       });
-
-      if (!isOpen) {
-        item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      } else {
-        item.classList.remove('open');
-        answer.style.maxHeight = 0;
-      }
     });
-  });
-
-  // footer year (safe if #year isn't on every page)
-  const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Attach smooth scroll behavior to any link that goes to #top
-    document.querySelectorAll('a[href="#top"]').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  });
-</script>
-<script src="review-bar.js" defer></script>
-<script>
-async function handleLeadSubmit(e) {
-  e.preventDefault();
-
-  const form = document.getElementById('lead-form');
-  const statusEl = document.getElementById('form-status');
-  if (!form || !statusEl) return;
-
-  statusEl.textContent = 'Sending...';
-
-  const payload = {
-    name: form.name.value.trim(),
-    phone: form.phone.value.trim(),
-    email: form.email.value.trim(),
-    message: form.message.value.trim()
-  };
-
-  try {
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-
-    statusEl.textContent = "Thank you! We'll reach out soon.";
-    form.reset();
-  } catch (err) {
-    console.error('Network error:', err);
-    statusEl.textContent =
-      'Network error. Please check your connection and try again.';
-  }
-}
-</script>
-
+  </script>
 </body>
 </html>

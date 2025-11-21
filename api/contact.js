@@ -11,19 +11,18 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Missing required fields." });
   }
 
-  // Make sure we have an API key configured
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("Missing RESEND_API_KEY environment variable");
     return res.status(500).json({
-      error:
-        "Email service not configured. Please try again later."
+      error: "Email service not configured. Please try again later."
     });
   }
 
   try {
-    // Build the email payload
     const emailData = {
+      // IMPORTANT: use your verified Resend domain here
+      // Example if your verified domain is pergolabuilderhouston.com:
       from: "Pergola Builder Houston <forms@pergolabuilderhouston.com>",
       to: [
         "chavezdarrel@yahoo.com",
@@ -43,7 +42,6 @@ ${message}
       `.trim()
     };
 
-    // Send email via Resend API
     const resp = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -53,32 +51,22 @@ ${message}
       body: JSON.stringify(emailData)
     });
 
-    let details = "";
-    let data = null;
-
-    try {
-      data = await resp.json();
-      if (data) {
-        details = data.message || data.error || JSON.stringify(data);
-      }
-    } catch (e) {
+    if (!resp.ok) {
+      let bodyText = "";
       try {
-        details = await resp.text();
-      } catch {
+        bodyText = await resp.text();
+      } catch (e) {
         // ignore
       }
-    }
-
-    if (!resp.ok) {
-      console.error("Resend error:", resp.status, details);
+      console.error("Resend error:", resp.status, bodyText);
       return res.status(500).json({
         error:
-          details ||
+          bodyText ||
           `Resend returned status ${resp.status} while sending the email.`
       });
     }
 
-    // Success – tell frontend it's good
+    // Success
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error sending lead email:", error);
