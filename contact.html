@@ -281,21 +281,14 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify(payload)
       });
 
-      let data = {};
-      try {
-        data = await res.json();
-      } catch (err) {
-        // ignore JSON parse error
+      if (!res.ok) {
+        statusEl.textContent =
+          'Something went wrong. Please call us or try again.';
+        return;
       }
 
-      if (res.ok && (data.ok || !data.error)) {
-        statusEl.textContent = "Thank you! We'll reach out soon.";
-        form.reset();
-      } else {
-        console.error('Contact error:', data);
-        statusEl.textContent =
-          data.error || 'Something went wrong. Please call us or try again.';
-      }
+      statusEl.textContent = "Thank you! We'll reach out soon.";
+      form.reset();
     } catch (err) {
       console.error('Network error:', err);
       statusEl.textContent =
@@ -304,6 +297,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
