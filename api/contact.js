@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   try {
     // Build the email payload
     const emailData = {
-      from: "Pergola Builder Houston <onboarding@resend.dev>",
+      from: "Pergola Builder Houston <forms@pergolabuilderhouston.com>",
       to: [
         "chavezdarrel@yahoo.com",
         "ed@frontlineconstructionhtx.com"
