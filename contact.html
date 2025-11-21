@@ -255,7 +255,7 @@
     });
   });
 </script>
-  <script src="review-bar.js" defer></script>
+<script src="review-bar.js" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('lead-form');
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
         data = await res.json();
       } catch (err) {
-        // ignore if no JSON body
+        // ignore JSON parse error
       }
 
       if (res.ok && (data.ok || !data.error)) {
@@ -304,6 +304,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+</body>
+</html>
+
 
 
 </body>
