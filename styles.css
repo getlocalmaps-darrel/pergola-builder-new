@@ -235,23 +235,26 @@ body {
 
     /* HERO */
 
-    .hero {
-      position: relative;
-      padding: 6rem 1.5rem 5rem;
-      color: #f9fafb;
-      text-align: left;
-      background-image:
-        linear-gradient(
-          to right,
-          rgba(15, 23, 42, 0.90),
-          rgba(15, 23, 42, 0.70),
-          rgba(15, 23, 42, 0.40)
-        ),
-        url("images/hero-main.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+/* Homepage hero – compact height similar to service pages */
+.hero {
+  position: relative;
+  /* was: padding: 6rem 1.5rem 5rem; */
+  padding: 3rem 1.5rem 2.5rem;
+  color: #f9fafb;
+  text-align: left;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(15, 23, 42, 0.90),
+      rgba(15, 23, 42, 0.70),
+      rgba(15, 23, 42, 0.40)
+    ),
+    url("images/hero-main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
     .hero::after {
       content: "";
@@ -268,7 +271,7 @@ body {
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 2.4rem;
       align-items: center;
-      min-height: 420px;
+      min-height: 280px;
     }
 
 .hero h1 {
@@ -977,9 +980,10 @@ body {
         padding-inline: 1rem;
       }
 
-      .hero {
-        padding: 5rem 1.25rem 3.5rem;
-      }
+  .hero {
+    /* was: 5rem 1.25rem 3.5rem */
+    padding: 3rem 1.25rem 2.2rem;
+  }
 
       .hero-inner {
         grid-template-columns: minmax(0, 1fr);
