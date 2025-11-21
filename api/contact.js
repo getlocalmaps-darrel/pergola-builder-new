@@ -15,12 +15,10 @@ export default async function handler(req, res) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("Missing RESEND_API_KEY environment variable");
-    return res
-      .status(500)
-      .json({
-        error:
-          "Email service not configured. Please try again later."
-      });
+    return res.status(500).json({
+      error:
+        "Email service not configured. Please try again later."
+    });
   }
 
   try {
@@ -32,13 +30,13 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: "Pergola Builder Houston <onboarding@resend.dev>",
+        from: "Pergola Builder Houston <onboarding@resend.dev>", // or forms@yourdomain.com once verified
         to: [
           "chavezdarrel@yahoo.com",
           "ed@frontlineconstructionhtx.com"
-        ], // send to both you and Ed
+        ],
         subject: "Pergola Builder Houston Lead",
-        reply_to: email, // hitting Reply goes to the customer
+        reply_to: email, // so hitting Reply goes to the customer
         text: `
 New Pergola Builder Houston Lead
 
@@ -52,16 +50,15 @@ ${message}
       })
     });
 
-    // Try to read the response body (success or error)
     let details = "";
     let data = null;
+
     try {
       data = await resp.json();
       if (data) {
         details = data.message || data.error || JSON.stringify(data);
       }
     } catch (e) {
-      // Not JSON; try text
       try {
         details = await resp.text();
       } catch {
@@ -78,7 +75,7 @@ ${message}
       });
     }
 
-    // Success – front-end can show thank-you
+    // Success
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error sending lead email:", error);
