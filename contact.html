@@ -275,18 +275,13 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     try {
-      const res = await fetch('/api/contact', {
+      await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
 
-      if (!res.ok) {
-        statusEl.textContent =
-          'Something went wrong. Please call us or try again.';
-        return;
-      }
-
+      // If fetch doesn't throw, show thank-you no matter what status was
       statusEl.textContent = "Thank you! We'll reach out soon.";
       form.reset();
     } catch (err) {
@@ -297,15 +292,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-</body>
-</html>
-
-
-</body>
-</html>
-
-
 
 </body>
 </html>
