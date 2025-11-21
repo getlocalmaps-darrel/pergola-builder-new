@@ -1,0 +1,24 @@
+# robots.txt for https://www.pergolabuilderhouston.com/
+# Goal: Allow search + AI crawlers to fully access and index the site.
+
+# OpenAI search + training bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google search + AI extension
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing, other search engines, and generic bots
+User-agent: *
+Allow: /
+
+# Optional: sitemap (if/when you have one)
+# Replace the URL if your sitemap is named differently or remove this line if no sitemap yet.
+Sitemap: https://www.pergolabuilderhouston.com/sitemap.xml
