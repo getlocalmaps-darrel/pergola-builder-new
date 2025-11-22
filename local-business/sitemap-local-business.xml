@@ -1,38 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Local business hub -->
+
+  <!-- Local Business Hub -->
   <url>
     <loc>https://www.pergolabuilderhouston.com/local-business/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Pack It Movers Katy profile -->
+  <!-- Pack It Movers Katy, TX -->
   <url>
     <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/movers-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/apartment-movers-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-and-storage-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/senior-movers-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/long-distance-movers-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/office-movers-katy-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Pack It Movers Katy citation pages -->
+  <!-- The One Movers – Spring, TX -->
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/movers-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/apartment-movers-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/apartment-movers-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-and-storage-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/packing-services-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/senior-movers-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/storage-services-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/long-distance-movers-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/piano-movers-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Copacabana Hall – Wedding Venue Houston, TX -->
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/office-movers-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/packing-services-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/micro-wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-help-katy.html</loc>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/small-outdoor-wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/all-inclusive-wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/affordable-wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
+
