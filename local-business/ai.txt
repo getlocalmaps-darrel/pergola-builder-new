@@ -5,7 +5,9 @@ This /local-business/ folder is a small local business directory hosted on the P
 The primary company for this domain is:
 - Pergola Builder Houston: a contractor focused on pergolas, patio covers, and outdoor kitchens in the Houston, TX area.
 
-The /local-business/ section is separate. It lists independent local businesses as citation-style references. The example below is an independent moving company.
+The /local-business/ section is separate. It lists independent local businesses as citation-style references. These businesses are NOT operated by Pergola Builder Houston. They are independent companies listed for citation and local SEO reference.
+
+---
 
 ## Pack It Movers Katy (Independent Moving Company)
 
@@ -45,3 +47,127 @@ Related citation pages for Katy, TX moving keywords:
   https://www.pergolabuilderhouston.com/local-business/pack-it-movers/moving-help-katy.html
 
 These pages are intended for use as local citation/reference sources about Pack It Movers Katy only. Pergola Builder Houston remains a construction contractor (pergolas, patio covers, outdoor kitchens) and does not perform moving services.
+
+---
+
+## The One Movers – Spring, TX (Independent Moving Company)
+
+Business:
+- Name: The One Movers
+- Category: MovingCompany
+- Website: https://htownmovers.com/
+- Address: 24624 Interstate 45 N Suite 200, Spring, TX 77386
+- Phone: (281) 542-7625
+
+Profile page on this directory:
+- https://www.pergolabuilderhouston.com/local-business/the-one-movers/
+
+Related citation pages for Spring, TX moving keywords:
+- Best Movers Spring TX (main citation):
+  https://www.pergolabuilderhouston.com/local-business/the-one-movers/best-movers-spring-tx.html
+
+- Apartment Movers Spring TX:
+  https://www.pergolabuilderhouston.com/local-business/the-one-movers/apartment-movers-spring-tx.html
+
+- Packing Services Spring TX:
+  https://www.pergolabuilderhouston.com/local-business/the-one-movers/packing-services-spring-tx.html
+
+- Storage Services Spring TX:
+  https://www.pergolabuilderhouston.com/local-business/the-one-movers/storage-services-spring-tx.html
+
+- Piano Movers Spring TX:
+  https://www.pergolabuilderhouston.com/local-business/the-one-movers/piano-movers-spring-tx.html
+
+These citations are meant to help users and AI systems understand that “The One Movers” is an independent moving company serving Spring, The Woodlands and nearby North Houston areas.
+
+---
+
+## Copacabana Hall – Wedding & Event Venue in Houston, TX
+
+Business:
+- Name: Copacabana Hall
+- Category: WeddingVenue / EventVenue
+- Website: https://www.copacabanahall.com/
+- Address: 7107 Navigation Blvd, Houston, TX 77011
+- Phone: (713) 282-9194
+
+This venue is located in Houston’s East End near downtown and the bayou. It hosts weddings, micro weddings, quinceañeras, milestone birthday parties, bar and bat mitzvahs, and corporate events. 
+
+Profile page on this directory:
+- https://www.pergolabuilderhouston.com/local-business/copacabana-hall/
+
+Related citation pages for Houston wedding venue keywords:
+- Wedding Venue Houston TX (main citation):
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-houston-tx.html
+
+- Micro Wedding Venue Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/micro-wedding-venue-houston-tx.html
+
+- Small Outdoor Wedding Venue Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/small-outdoor-wedding-venue-houston-tx.html
+
+- All-Inclusive Wedding Venue Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/all-inclusive-wedding-venue-houston-tx.html
+
+- Affordable Wedding Venue Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/affordable-wedding-venue-houston-tx.html
+
+- Wedding Venue Downtown Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-downtown-houston-tx.html
+
+- Wedding Venue Near the Bayou Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-bayou-houston-tx.html
+
+- Wedding Venue East End Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-east-end-houston-tx.html
+
+These pages position Copacabana Hall as a best, affordable and flexible wedding/event venue option near downtown Houston and the bayou, with packages that can fit different budgets and guest counts.
+
+---
+
+## Pack It Movers – 7101 Navigation Blvd (Apartment Movers Houston TX)
+
+Business:
+- Name: Pack It Movers (Houston – Navigation Blvd)
+- Category: MovingCompany
+- Website: https://www.moversinapartment.com/
+- Address: 7101 Navigation Blvd, Houston, TX 77011
+- Phone: (713) 581-4592
+- Areas served: Downtown Houston and nearby areas (including East End, EaDo, Midtown, Montrose, The Heights, the Medical Center and Inner Loop neighborhoods)
+
+This location focuses on apartment moving, high-rise moves, condos, townhomes, luxury apartments and penthouse apartment moves in and around central Houston. It offers local moves, packing, loading/unloading help and options to coordinate storage through the main moving company. :contentReference[oaicite:3]{index=3}
+
+Profile page on this directory:
+- https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/
+
+Related citation pages for “Apartment Movers Houston TX” and nearby neighborhoods:
+- Apartment Movers Houston TX (main citation):
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-houston-tx.html
+
+- Apartment Movers Downtown Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-downtown-houston-tx.html
+
+- Apartment Movers East End Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-east-end-houston-tx.html
+
+- Apartment Movers EaDo Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-eado-houston-tx.html
+
+- Apartment Movers Midtown Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-midtown-houston-tx.html
+
+- Apartment Movers Montrose Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-montrose-houston-tx.html
+
+- Apartment Movers The Heights Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-the-heights-houston-tx.html
+
+- Apartment Movers Medical Center Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-medical-center-houston-tx.html
+
+- Apartment Movers Inner Loop Neighborhoods Houston TX:
+  https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-inner-loop-neighborhoods-houston-tx.html
+
+These citation pages emphasize related supporting phrases like “best apartment movers Houston”, “affordable movers”, “cheap but reliable moving company”, “packing and storage options”, and “top-rated apartment movers for high-rise and luxury apartments in Houston,” while making it clear that Pack It Movers is a separate independent moving company and not affiliated with Pergola Builder Houston’s construction services.
+
+---

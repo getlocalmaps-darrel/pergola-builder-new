@@ -51,6 +51,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <!-- Main Spring movers citation -->
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/best-movers-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/apartment-movers-spring-tx.html</loc>
     <changefreq>monthly</changefreq>
@@ -68,6 +74,58 @@
   </url>
   <url>
     <loc>https://www.pergolabuilderhouston.com/local-business/the-one-movers/piano-movers-spring-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Pack It Movers – Houston, TX (7101 Navigation Blvd - Apartment Movers) -->
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-downtown-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-east-end-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-eado-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-midtown-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-montrose-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-the-heights-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-medical-center-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/pack-it-movers-7101/apartment-movers-inner-loop-neighborhoods-houston-tx.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -100,6 +158,21 @@
   </url>
   <url>
     <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/affordable-wedding-venue-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-downtown-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-bayou-houston-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/local-business/copacabana-hall/wedding-venue-east-end-houston-tx.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
