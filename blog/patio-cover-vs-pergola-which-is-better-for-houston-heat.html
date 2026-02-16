@@ -23,6 +23,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
 
     <!-- Performance: Preconnect -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -164,32 +165,7 @@
         .font-header { font-family: 'system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif', sans-serif; }
 
         /* ========== Header ========== */
-        .blog-header {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .top-bar {
-            background-color: var(--brand-primary);
-            color: white; text-align: center;
-            padding: 8px; font-size: 12px;
-            text-transform: uppercase; font-weight: bold;
-            font-family: 'system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif', sans-serif;
-            letter-spacing: 1px;
-        }
-        .nav-link {
-            text-transform: uppercase; font-weight: 700;
-            font-size: 0.875rem; letter-spacing: 0.05em;
-            color: #374151; text-decoration: none;
-            transition: color 0.3s;
-        }
-        .nav-link:hover { color: var(--brand-primary); }
-        .desktop-nav { display: none; }
-        .mobile-menu-btn { display: block; }
-        @media (min-width: 1024px) {
-            .desktop-nav { display: flex; gap: 2rem; align-items: center; }
-            .mobile-menu-btn { display: none; }
-        }
+        
 
         /* ========== Article Hero ========== */
         .article-hero {
@@ -422,30 +398,6 @@
             background: var(--brand-accent); color: var(--brand-dark);
         }
 
-        /* ========== Footer ========== */
-        .blog-footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-            color: #9ca3af; padding: 3rem 1rem;
-            text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* ========== Mobile Menu ========== */
-        #blog-mobile-menu {
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(-100%);
-        }
-        #blog-mobile-menu.open { transform: translateX(0); }
-
-        /* ========== Mobile Sticky ========== */
-        .mobile-sticky {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            z-index: 50; background: white;
-            border-top: 1px solid #e5e7eb;
-            box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
-            display: flex;
-        }
-        @media (min-width: 1024px) { .mobile-sticky { display: none; } }
-
         /* ========== Responsive ========== */
         @media (max-width: 768px) {
             .article-hero { padding: 3rem 1rem 2rem; }
@@ -456,54 +408,34 @@
     </style>
 </head>
 
-<body style="padding-top: 96px; padding-bottom: 4rem;">
+<body style="">
 
     <!-- ===== HEADER ===== -->
-    <header class="blog-header">
-        <div class="top-bar">
-            Custom Pergolas &amp; Patio Covers — <strong>126 Five-Star Reviews</strong> — Call <a href='tel:+18325095457'>(832) 509-5457</a>
+        <header class="site-header" id="top">
+      <div class="nav-inner">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="brand">
+          <div class="brand-logo">
+            <img src="/images/logo.jpg" alt="Pergola Builder Houston Logo" width="200" height="60" />
+          </div>
+          <div class="brand-text">
+            <span>Pergola Builder</span>
+            <span>Houston</span>
+          </div>
         </div>
-        <div style="background: white; width: 100%;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto;">
-                <a href="https://www.pergolabuilderhouston.com/" style="display: flex; align-items: center; z-index: 50; flex-shrink: 0;">
-                    <img src="../images/logo.jpg" alt="Pergola Builder Houston" style="height: 48px; width: auto; object-fit: contain;">
-                </a>
-
-                <nav class="desktop-nav">
-                    <a href="https://www.pergolabuilderhouston.com/" class="nav-link">Home</a>
-<a href="https://www.pergolabuilderhouston.com/reviews.html" class="nav-link">Reviews</a>
-<a href="https://www.pergolabuilderhouston.com/#services" class="nav-link">Services</a>
-<a href="https://www.pergolabuilderhouston.com/gallery.html" class="nav-link">Gallery</a>
-<a href="https://www.pergolabuilderhouston.com/blog/" class="nav-link">Blog</a>
-<a href="https://www.pergolabuilderhouston.com/contact.html" class="nav-link">Contact</a>
-                </nav>
-
-                <div class="desktop-nav" style="gap: 1rem;">
-                    <a href="tel:8325095457" style="display: flex; flex-direction: column; align-items: flex-end; text-decoration: none;">
-                        <span style="font-size: 0.75rem; color: #6b7280; font-weight: 700; text-transform: uppercase;">Call Now</span>
-                        <span class="font-header" style="font-size: 1.25rem; font-weight: 700; color: var(--brand-dark); line-height: 1;">(832) 509-5457</span>
-                    </a>
-                </div>
-
-                <button id="blog-menu-btn" class="mobile-menu-btn" style="font-size: 1.5rem; color: var(--brand-dark); background: none; border: none; cursor: pointer; padding: 8px; display: block;" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/reviews.html">Reviews</a>
+          <a href="/#services">Services</a>
+          <a href="/gallery.html">Gallery</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <a class="nav-call" href="tel:+18325095457">(832) 509-5457</a>
+      </div>
     </header>
-
-    <!-- ===== MOBILE MENU ===== -->
-    <div id="blog-mobile-menu" style="position: fixed; inset: 0; background: white; z-index: 90; display: flex; flex-direction: column; padding: 10rem 1.5rem 0; box-shadow: 0 25px 50px rgba(0,0,0,0.25);">
-        <a href="https://www.pergolabuilderhouston.com/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Home</a>
-<a href="https://www.pergolabuilderhouston.com/reviews.html" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Reviews</a>
-<a href="https://www.pergolabuilderhouston.com/#services" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Services</a>
-<a href="https://www.pergolabuilderhouston.com/gallery.html" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Gallery</a>
-<a href="https://www.pergolabuilderhouston.com/blog/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Blog</a>
-<a href="https://www.pergolabuilderhouston.com/contact.html" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Contact</a>
-        <a href="tel:8325095457" style="margin-top: 1.5rem; text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--brand-primary); text-decoration: none;">
-            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(832) 509-5457
-        </a>
-    </div>
 
     <!-- ===== ARTICLE HERO ===== -->
     <section class="article-hero">
@@ -643,58 +575,40 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="blog-footer">
-        <div style="max-width: 56rem; margin: 0 auto;">
-            <img src="../images/logo.jpg" alt="Pergola Builder Houston" style="height: 4rem; margin: 0 auto 1rem; opacity: 0.95;">
-            <p style="font-size: 0.875rem; color: #d1d5db; margin: 0;">&copy; <script>document.write(new Date().getFullYear())</script> Pergola Builder Houston. All rights reserved.</p>
-            <div style="margin-top: 1rem; font-size: 0.75rem; color: #6b7280;">
-                Website Design and Marketing by
-                <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; margin-left: 0.25rem;">
-                    <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" style="height: 1.5rem; opacity: 0.8;">
-                </a>
-            </div>
-        </div>
+        <footer>
+      <p class="footer-main">
+        &copy; <span id="year"></span> Pergola Builder Houston. All rights reserved.
+      </p>
+      <div class="footer-credit">
+        <span>Website Design and Chat GPT Marketing by</span>
+        <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" class="footer-logo" />
+        </a>
+      </div>
     </footer>
-
-    <!-- ===== MOBILE STICKY ===== -->
-    <div class="mobile-sticky">
-        <a href="tel:8325095457" style="flex: 1; background: #f1f5f9; color: var(--brand-dark); padding: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; font-size: 0.875rem; text-decoration: none; border-right: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-            <i class="fas fa-phone"></i> Call
-        </a>
-        <a href="sms:+18325095457" style="flex: 1; background: var(--brand-primary); color: white; padding: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; font-size: 0.875rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-            <i class="fas fa-comment"></i> Text Us
-        </a>
-    </div>
 
     <!-- ===== SCRIPTS ===== -->
     <script>
-        // Mobile menu toggle
-        document.getElementById('blog-menu-btn').addEventListener('click', function() {
-            document.getElementById('blog-mobile-menu').classList.toggle('open');
+      // Mobile nav toggle
+      var navToggle = document.querySelector('.nav-toggle');
+      var headerEl = document.querySelector('.site-header');
+      var navLinksAll = document.querySelectorAll('.nav-links a');
+      if (navToggle && headerEl) {
+        navToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          headerEl.classList.toggle('nav-open');
         });
-        document.querySelectorAll('#blog-mobile-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.getElementById('blog-mobile-menu').classList.remove('open');
-            });
+        navLinksAll.forEach(function(link) {
+          link.addEventListener('click', function() { headerEl.classList.remove('nav-open'); });
         });
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(function(q) {
-            q.addEventListener('click', function() {
-                this.parentElement.classList.toggle('open');
-            });
+        document.addEventListener('click', function(e) {
+          if (!headerEl.classList.contains('nav-open')) return;
+          if (!e.target.closest('.nav-inner')) headerEl.classList.remove('nav-open');
         });
-
-        // Smooth scroll for TOC links
-        document.querySelectorAll('.toc-list a').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+      }
+      // Footer year
+      var yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
