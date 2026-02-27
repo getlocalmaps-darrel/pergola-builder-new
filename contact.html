@@ -16,6 +16,42 @@
 
   <!-- Shared site styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Product Schema â€” triggers star rich results in Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Pergola Builder Houston",
+    "description": "Custom pergola design and construction for Houston-area homeowners. Pergolas, patio covers, outdoor kitchens, and shade structures.",
+    "image": "https://www.pergolabuilderhouston.com/images/logo.png",
+    "url": "https://www.pergolabuilderhouston.com/",
+    "itemCondition": "https://schema.org/NewCondition",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pergola Builder Houston"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "Thing",
+        "name": "Pergola Builder Houston"
+      },
+      "ratingValue": "4.9",
+      "ratingCount": "126",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.pergolabuilderhouston.com/contact.html",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free pergola estimate"
+    }
+  }
+  </script>
 </head>
 <body>
 <header class="site-header" id="top">
@@ -90,6 +126,13 @@
       </p>
 
       <form id="lead-form" class="form-grid">
+        <!-- Honeypot — hidden from humans, bots auto-fill it -->
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <input type="hidden" id="form-loaded" name="_loaded" value="" />
+
         <div>
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" required />
@@ -264,6 +307,9 @@
   const statusEl = document.getElementById("form-status");
 
   if (form && statusEl) {
+    // Record page load time for bot timing detection
+    document.getElementById("form-loaded").value = Date.now().toString();
+
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       statusEl.style.display = "none";
@@ -273,7 +319,9 @@
         name: form.name.value.trim(),
         phone: form.phone.value.trim(),
         email: form.email.value.trim(),
-        message: form.message.value.trim()
+        message: form.message.value.trim(),
+        website: form.website.value,
+        _loaded: form._loaded.value
       };
 
       try {
