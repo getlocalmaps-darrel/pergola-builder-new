@@ -1,24 +1,62 @@
-# robots.txt for https://www.pergolabuilderhouston.com/
-# Goal: Allow search + AI crawlers to fully access and index the site.
+# Pergola Builder Houston — robots.txt
+# https://www.pergolabuilderhouston.com
 
-# OpenAI search + training bots
+User-agent: *
+Allow: /
+
+# AI Crawlers — Welcome
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
-# Google search + AI extension
-User-agent: Googlebot
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# Bing, other search engines, and generic bots
-User-agent: *
+User-agent: Googlebot
 Allow: /
 
-# Optional: sitemap (if/when you have one)
-# Replace the URL if your sitemap is named differently or remove this line if no sitemap yet.
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemaps
 Sitemap: https://www.pergolabuilderhouston.com/sitemap.xml
+
+# AI-Readable Files
+# ai.txt: https://www.pergolabuilderhouston.com/ai.txt
+# llms.txt: https://www.pergolabuilderhouston.com/llms.txt
+
+# Per-City AI Files (10 city-specific recommendation files)
+# Index: https://www.pergolabuilderhouston.com/ai.txt (see "Service Area Pages" section)
+# Pattern: https://www.pergolabuilderhouston.com/[city]-pergolas-ai.txt

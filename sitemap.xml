@@ -94,6 +94,21 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Main service pages -->
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/outdoor-kitchens-houston.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/patio-covers-houston.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Project / job pages -->
   <url>
     <loc>https://www.pergolabuilderhouston.com/richmond-outdoor-kitchen-job.html</loc>
@@ -164,6 +179,10 @@
   </url>
   <url>
     <loc>https://www.pergolabuilderhouston.com/blog/custom-pergola-vs-prefab-kit-what-houston-builders-wont-tell-you.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pergolabuilderhouston.com/blog/how-much-does-a-custom-pergola-cost-in-houston-2024-breakdown.html</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
