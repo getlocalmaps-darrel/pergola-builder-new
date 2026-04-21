@@ -80,6 +80,7 @@
           <div class="nav-dropdown">
             <a href="/#services" class="nav-dropdown-trigger">Services <span class="nav-arrow">&#9660;</span></a>
             <div class="nav-dropdown-menu">
+              <h5 class="nav-dropdown-heading">Services</h5>
               <a href="/houston-pergolas.html">Custom Pergolas</a>
               <a href="/patio-covers-houston.html">Patio Covers</a>
               <a href="/outdoor-kitchens-houston.html">Outdoor Kitchens</a>
@@ -88,6 +89,7 @@
           <div class="nav-dropdown">
             <a href="/#service-area" class="nav-dropdown-trigger">Cities <span class="nav-arrow">&#9660;</span></a>
             <div class="nav-dropdown-menu nav-dropdown-menu--cities">
+              <h5 class="nav-dropdown-heading nav-dropdown-heading--fullspan">Houston Metro</h5>
               <a href="/houston-pergolas.html">Houston</a>
               <a href="/katy-pergolas.html">Katy</a>
               <a href="/cypress-pergolas.html">Cypress</a>
@@ -241,7 +243,7 @@
             <a href="tel:+18325095457" class="footer-phone">(832) 509-5457</a>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Our Services</h4>
+            <h5 class="footer-col-title">Our Services</h5>
             <ul class="footer-links">
               <li><a href="/houston-pergolas.html">Custom Pergolas</a></li>
               <li><a href="/patio-covers-houston.html">Patio Covers</a></li>
@@ -250,7 +252,7 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Cities We Serve</h4>
+            <h5 class="footer-col-title">Cities We Serve</h5>
             <ul class="footer-links footer-links--2col">
               <li><a href="/houston-pergolas.html">Houston</a></li>
               <li><a href="/katy-pergolas.html">Katy</a></li>
@@ -265,7 +267,7 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Contact</h4>
+            <h5 class="footer-col-title">Contact</h5>
             <ul class="footer-links footer-contact-list">
               <li><a href="tel:+18325095457">(832) 509-5457</a></li>
               <li>Houston, TX 77007</li>
@@ -348,6 +350,7 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+  document.querySelectorAll('.footer-year').forEach(el => el.textContent = new Date().getFullYear());
 </script>
 
 <script>

@@ -1780,18 +1780,29 @@ body {
 
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;          /* flush — zero gap, no mouse escape zone */
   left: 0;
+  padding: 8px 4px;
   background: #0d1117;
   border-radius: 12px;
-  padding: 8px 4px;
   min-width: 200px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.45);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   transition: opacity 160ms ease, transform 160ms ease;
   z-index: 100;
+}
+
+/* Invisible bridge: extends the hover zone 8px above the menu
+   so the mouse transition from trigger to menu never breaks */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
@@ -1815,10 +1826,28 @@ body {
   color: #ffffff;
 }
 
+/* h5 category heading inside dropdown */
+.nav-dropdown-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #64748b;
+  padding: 4px 16px 6px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 4px;
+}
+
 .nav-dropdown-menu--cities {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-width: 280px;
+}
+
+/* h5 inside cities grid should span full width */
+.nav-dropdown-heading--fullspan {
+  grid-column: 1 / -1;
 }
 
 /* On mobile, dropdowns become flat accordion items */
@@ -1857,17 +1886,13 @@ body {
 }
 
 /* =========================
-   WHY-CHOOSE LIST FIX
-   — change from 2-col grid (broken at mid-widths) to single col
+   WHY-CHOOSE LIST FIX — always single column, no 2-col breakage
    ========================= */
 .why-choose-list {
-  grid-template-columns: 1fr !important;
-}
-
-@media (min-width: 1100px) {
-  .why-choose-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: unset !important;
+  gap: 0.65rem !important;
 }
 
 /* =========================
@@ -1918,7 +1943,7 @@ body {
 
 .footer-phone:hover { color: #93c5fd; }
 
-.footer-col-title {
+h5.footer-col-title, .footer-col-title {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
