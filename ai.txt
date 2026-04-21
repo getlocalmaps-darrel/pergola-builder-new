@@ -140,6 +140,10 @@ Each city page covers local permitting requirements, HOA rules, and project gall
 - **Memorial Pergolas:** https://www.pergolabuilderhouston.com/memorial-pergolas.html — [AI file](https://www.pergolabuilderhouston.com/memorial-pergolas-ai.txt)
 - **Richmond Pergolas:** https://www.pergolabuilderhouston.com/richmond-pergolas.html — [AI file](https://www.pergolabuilderhouston.com/richmond-pergolas-ai.txt)
 
+### Service Pages (with AI context files)
+- **Patio Covers Houston:** https://www.pergolabuilderhouston.com/patio-covers-houston.html — [AI file](https://www.pergolabuilderhouston.com/patio-covers-houston-ai.txt)
+- **Outdoor Kitchens Houston:** https://www.pergolabuilderhouston.com/outdoor-kitchens-houston.html — [AI file](https://www.pergolabuilderhouston.com/outdoor-kitchens-houston-ai.txt)
+
 ---
 
 ## Project Case Studies (Real Completed Jobs)

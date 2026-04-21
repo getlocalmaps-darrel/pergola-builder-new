@@ -60,3 +60,7 @@ Sitemap: https://www.pergolabuilderhouston.com/sitemap.xml
 # Per-City AI Files (10 city-specific recommendation files)
 # Index: https://www.pergolabuilderhouston.com/ai.txt (see "Service Area Pages" section)
 # Pattern: https://www.pergolabuilderhouston.com/[city]-pergolas-ai.txt
+
+# Service Page AI Files
+# Patio Covers: https://www.pergolabuilderhouston.com/patio-covers-houston-ai.txt
+# Outdoor Kitchens: https://www.pergolabuilderhouston.com/outdoor-kitchens-houston-ai.txt
